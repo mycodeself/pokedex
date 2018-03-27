@@ -1,0 +1,49 @@
+html, body {
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  background-color: aqua;
+  height: 800px;
+  width: 600px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -400px;
+  margin-left: -300px;
+}
+
+.pokedex {
+  background-color: $primary-color;
+  height: 100%;
+  width: 100%;
+
+  .top-side {
+    width: 100%;
+    height: 6em;
+    background-color: $primary-color--dark;
+    align-items: center;
+    display: flex;
+
+    .sphere {
+      height: 64px;
+      width: 64px;
+      border-radius: 50%;
+      background-color: #28aafd;
+      border: 4px solid #ebebeb;
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: 24px;
+    }
+
+    .buttons {
+
+    }
+  }
+
+}
