@@ -6,6 +6,7 @@ use App\Entity\PokemonTypes;
 use App\Exception\PokemonNotFoundException;
 use App\Repository\PokemonRepositoryInterface;
 use App\Service\Request\CreatePokemonRequest;
+use App\Service\Request\UpdatePokemonRequest;
 
 /**
  * Class PokemonService
@@ -50,6 +51,26 @@ class PokemonService
         $this->pokemonRepository->save($pokemon);
 
         return $pokemon;
+    }
+
+    /**
+     * @param UpdatePokemonRequest $request
+     * @throws PokemonNotFoundException
+     */
+    public function update(UpdatePokemonRequest $request): void
+    {
+        $pokemon = $this->pokemonRepository->getById($request->id());
+
+        $pokemon->updateName($request->name());
+        $pokemon->updateShortDescription($request->shortDescription());
+        $pokemon->updateTypes(new PokemonTypes($request->firstType(), $request->secondType()));
+
+        if(!empty($request->evolutionId())) {
+            $evolution = $this->pokemonRepository->getById($request->evolutionId());
+            $pokemon->updateEvolution($evolution);
+        }
+
+        $this->pokemonRepository->save($pokemon);
     }
 
     /**

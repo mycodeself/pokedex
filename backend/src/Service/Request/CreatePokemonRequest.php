@@ -10,27 +10,27 @@ class CreatePokemonRequest
     /**
      * @var string
      */
-    private $name;
+    protected $name;
 
     /**
      * @var string
      */
-    private $shortDescription;
+    protected $shortDescription;
 
     /**
      * @var string
      */
-    private $firstType;
+    protected $firstType;
 
     /**
      * @var string
      */
-    private $secondType;
+    protected $secondType;
 
     /**
      * @var int
      */
-    private $evolutionId;
+    protected $evolutionId;
 
     /**
      * CreatePokemonRequest constructor.
@@ -97,11 +97,11 @@ class CreatePokemonRequest
 
     /**
      * @param array $data
-     * @return CreatePokemonRequest
+     * @return static
      */
-    public static function fromArray(array $data): self
+    public static function fromArray(array $data)
     {
-        return new CreatePokemonRequest(
+        return new static(
             isset($data['name']) ? $data['name'] : '',
             isset($data['shortDescription']) ? $data['shortDescription'] : '',
             isset($data['firstType']) ? $data['firstType'] : '',

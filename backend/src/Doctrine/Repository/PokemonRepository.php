@@ -24,7 +24,7 @@ class PokemonRepository extends EntityRepository implements PokemonRepositoryInt
         $pokemon = $this->findById($id);
 
         if(empty($pokemon)) {
-            throw new PokemonNotFoundException();
+            throw new PokemonNotFoundException(sprintf('Pokemon with id %d was not found.', $id));
         }
 
         return $pokemon;

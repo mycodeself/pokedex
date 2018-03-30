@@ -50,6 +50,14 @@ class Pokemon implements JsonSerializable
     }
 
     /**
+     * @return int
+     */
+    public function id(): int
+    {
+        return $this->id;
+    }
+
+    /**
      * @return string
      */
     public function name(): string
@@ -82,6 +90,38 @@ class Pokemon implements JsonSerializable
     }
 
     /**
+     * @param string $name
+     */
+    public function updateName(string $name): void
+    {
+        $this->name = $name;
+    }
+
+    /**
+     * @param string $shortDescription
+     */
+    public function updateShortDescription(string $shortDescription): void
+    {
+        $this->shortDescription = $shortDescription;
+    }
+
+    /**
+     * @param PokemonTypes $pokemonTypes
+     */
+    public function updateTypes(PokemonTypes $pokemonTypes): void
+    {
+        $this->types = $pokemonTypes;
+    }
+
+    /**
+     * @param Pokemon $evolution
+     */
+    public function updateEvolution(Pokemon $evolution): void
+    {
+        $this->evolution = $evolution;
+    }
+
+    /**
      * Specify data which should be serialized to JSON
      * @link http://php.net/manual/en/jsonserializable.jsonserialize.php
      * @return mixed data which can be serialized by <b>json_encode</b>,
@@ -91,6 +131,7 @@ class Pokemon implements JsonSerializable
     public function jsonSerialize()
     {
         return [
+            'id' => $this->id(),
             'name' => $this->name(),
             'shortDescription' => $this->shortDescription(),
             'firstType' => $this->types()->primaryType(),

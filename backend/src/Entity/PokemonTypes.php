@@ -24,7 +24,7 @@ class PokemonTypes
     public function __construct(string $primaryType, string $secondaryType = '')
     {
         $this->primaryType = $primaryType;
-        $this->secondaryType = '';
+        $this->secondaryType = $secondaryType;
     }
 
     /**
