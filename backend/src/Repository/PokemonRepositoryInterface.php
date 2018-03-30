@@ -29,6 +29,12 @@ interface PokemonRepositoryInterface
     public function findAll(): array;
 
     /**
+     * @param string $name
+     * @return Pokemon
+     */
+    public function findByName(string $name): ?Pokemon;
+
+    /**
      * @param Pokemon $pokemon
      */
     public function save(Pokemon $pokemon): void;

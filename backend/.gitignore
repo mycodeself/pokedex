@@ -1,5 +1,6 @@
 docker/mariadb/data
 .composer
+.idea
 
 ###> symfony/framework-bundle ###
 /.env

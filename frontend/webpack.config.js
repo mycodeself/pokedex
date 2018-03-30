@@ -10,6 +10,7 @@ module.exports = {
     path: path.resolve(__dirname, 'public/build')
   },
   module: {
+
     rules: [
         {
           test: /\.scss$/,
@@ -33,7 +34,16 @@ module.exports = {
               loader: 'sass-loader'
             }
           ]
+        },
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          use: "babel-loader"
+        }, {
+          test: /\.jsx?$/,
+          exclude: /node_modules/,
+          use: "babel-loader"
         }
-      ]
+      ],
   }
 };

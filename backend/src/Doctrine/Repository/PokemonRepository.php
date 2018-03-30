@@ -70,4 +70,15 @@ class PokemonRepository extends EntityRepository implements PokemonRepositoryInt
         $entityManager->remove($pokemon);
         $entityManager->flush();
     }
+
+    /**
+     * @param string $name
+     * @return Pokemon|null|object
+     */
+    public function findByName(string $name): ?Pokemon
+    {
+        return $this->findOneBy([
+            'name' => $name
+        ]);
+    }
 }

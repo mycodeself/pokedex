@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Exception\InvalidRequestException;
+use App\Exception\PokemonAlreadyExistsException;
 use App\Exception\PokemonNotFoundException;
 use App\Service\PokemonService;
 use App\Service\Request\CreatePokemonRequest;
@@ -37,7 +39,46 @@ class PokemonController extends Controller
             return new JsonResponse($pokemon, Response::HTTP_CREATED);
         } catch (PokemonNotFoundException $e) {
             return new JsonResponse($e->getMessage(), Response::HTTP_NOT_FOUND);
+        } catch (InvalidRequestException $e) {
+            return new JsonResponse($e->getViolationListAsArray(), Response::HTTP_BAD_REQUEST);
+        } catch (PokemonAlreadyExistsException $e) {
+            return new JsonResponse($e->getMessage(), Response::HTTP_CONFLICT);
         }
+    }
+
+    /**
+     * @Route("/api/pokemons", methods={"GET"})
+     *
+     * @param PokemonService $pokemonService
+     * @return Response
+     */
+    public function getAllAction(PokemonService $pokemonService): Response
+    {
+        $pokemons = $pokemonService->getAll();
+
+        if(empty($pokemons)) {
+            return new JsonResponse(null, Response::HTTP_NOT_FOUND);
+        }
+
+        return new JsonResponse($pokemons, Response::HTTP_OK);
+    }
+
+    /**
+     * @Route("/api/pokemons/{id}", methods={"GET"})
+     *
+     * @param int $id
+     * @param PokemonService $pokemonService
+     * @return Response
+     */
+    public function getAction(int $id, PokemonService $pokemonService): Response
+    {
+        try {
+            $pokemon = $pokemonService->getById($id);
+            return new JsonResponse($pokemon, Response::HTTP_OK);
+        } catch (PokemonNotFoundException $e) {
+            return new JsonResponse(null, Response::HTTP_NOT_FOUND);
+        }
+
     }
 
     /**

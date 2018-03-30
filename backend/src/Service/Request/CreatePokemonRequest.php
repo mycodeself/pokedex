@@ -2,18 +2,25 @@
 
 namespace App\Service\Request;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
+
 /**
  * Class CreatePokemonRequest
  */
-class CreatePokemonRequest
+class CreatePokemonRequest implements RequestInterface
 {
     /**
      * @var string
+     * @Assert\NotBlank()
+     * @Assert\Length(min="4", max="24")
      */
     protected $name;
 
     /**
      * @var string
+     * @Assert\NotBlank()
+     * @Assert\Length(min="30")
      */
     protected $shortDescription;
 
