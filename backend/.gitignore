@@ -1,0 +1,9 @@
+docker/mariadb/data
+.composer
+
+###> symfony/framework-bundle ###
+/.env
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###

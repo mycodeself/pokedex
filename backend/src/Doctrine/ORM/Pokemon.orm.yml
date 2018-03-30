@@ -1,0 +1,25 @@
+App\Entity\Pokemon:
+  type: entity
+  table: pokemon
+  repositoryClass: App\Doctrine\Repository\PokemonRepository
+  id:
+    id:
+      type: integer
+      generator: { strategy: AUTO }
+
+  fields:
+    name:
+      type: string
+      length: 24
+    shortDescription:
+      type: string
+      length: 255
+
+  embedded:
+    types:
+      class: App\Entity\PokemonTypes
+      columnPrefix: false
+
+  manyToOne:
+    evolution:
+      targetEntity: App\Entity\Pokemon

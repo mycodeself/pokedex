@@ -1,0 +1,9 @@
+App\Entity\PokemonTypes:
+  type: embeddable
+  fields:
+    primaryType:
+      type: string
+      length: 60
+    secondaryType:
+      type: string
+      length: 60
