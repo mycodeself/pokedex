@@ -9,6 +9,8 @@ use JsonSerializable;
  */
 class Pokemon implements JsonSerializable
 {
+    const IMAGE_UPLOAD_PATH = __DIR__ . '/../../public/uploads/pokemons';
+
     /**
      * @var int
      */

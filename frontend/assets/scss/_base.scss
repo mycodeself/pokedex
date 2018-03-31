@@ -9,17 +9,16 @@ html, body {
 
 main {
   height: 700px;
-  width: 500px;
-  position: absolute;
-  top: 50%;
-  margin-top: -350px;
+  width: 100%;
 }
 
 .pokedex {
   background-color: $primary-color;
   height: 100%;
   width: 100%;
-  border: 1px solid black;
+  @include breakpoint(phablet) {
+    width: 600px;
+  }
 
   .top-side {
     width: 100%;

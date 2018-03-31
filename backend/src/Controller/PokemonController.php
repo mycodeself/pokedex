@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Pokemon;
 use App\Exception\InvalidRequestException;
 use App\Exception\PokemonAlreadyExistsException;
 use App\Exception\PokemonNotFoundException;
@@ -101,6 +102,8 @@ class PokemonController extends Controller
             return new JsonResponse(null, Response::HTTP_OK);
         } catch (PokemonNotFoundException $e) {
             return new JsonResponse($e->getMessage(), Response::HTTP_NOT_FOUND);
+        } catch (InvalidRequestException $e) {
+            return new JsonResponse($e->getViolationListAsArray(), Response::HTTP_BAD_REQUEST);
         }
     }
 
@@ -119,6 +122,20 @@ class PokemonController extends Controller
         } catch (PokemonNotFoundException $e) {
             return new JsonResponse(null, Response::HTTP_NOT_FOUND);
         }
+    }
+
+    /**
+     * @Route("/api/pokemons/{id}/image", methods={"PATCH"})
+     *
+     * @param int $id
+     * @param PokemonService $pokemonService
+     * @return Response
+     */
+    public function uploadImage(Request $request, int $id, PokemonService $pokemonService): Response
+    {
+        var_dump($request->files->all());
+        file_put_contents(Pokemon::IMAGE_UPLOAD_PATH . '/poke.png', $request->getContent(true));
+        return new Response();
     }
 
 }
