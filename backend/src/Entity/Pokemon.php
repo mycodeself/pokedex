@@ -37,6 +37,11 @@ class Pokemon implements JsonSerializable
     private $evolution;
 
     /**
+     * @var string
+     */
+    private $image;
+
+    /**
      * Pokemon constructor.
      * @param string $name
      * @param string $shortDescription
@@ -49,6 +54,7 @@ class Pokemon implements JsonSerializable
         $this->shortDescription = $shortDescription;
         $this->types = $type;
         $this->evolution = $evolution;
+        $this->image = '';
     }
 
     /**
@@ -92,6 +98,14 @@ class Pokemon implements JsonSerializable
     }
 
     /**
+     * @return string
+     */
+    public function image(): string
+    {
+        return $this->image;
+    }
+
+    /**
      * @param string $name
      */
     public function updateName(string $name): void
@@ -124,6 +138,14 @@ class Pokemon implements JsonSerializable
     }
 
     /**
+     * @param string $image
+     */
+    public function updateImage(string $image): void
+    {
+        $this->image = $image;
+    }
+
+    /**
      * Specify data which should be serialized to JSON
      * @link http://php.net/manual/en/jsonserializable.jsonserialize.php
      * @return mixed data which can be serialized by <b>json_encode</b>,
@@ -138,7 +160,8 @@ class Pokemon implements JsonSerializable
             'shortDescription' => $this->shortDescription(),
             'firstType' => $this->types()->primaryType(),
             'secondType' => $this->types()->secondaryType(),
-            'evolution' => $this->evolution()
+            'evolution' => $this->evolution(),
+            'image' => $this->image(),
         ];
     }
 }

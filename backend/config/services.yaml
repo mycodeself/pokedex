@@ -29,6 +29,16 @@ services:
     App\Repository\PokemonRepositoryInterface:
         alias: App\Doctrine\Repository\PokemonRepository
 
+    App\Validator\RequestValidator:
+        arguments:
+            - '@validator'
+
     App\Service\PokemonService:
         arguments:
             - '@App\Repository\PokemonRepositoryInterface'
+            - '@App\Validator\RequestValidator'
+
+    App\Service\PokemonImageService:
+        arguments:
+            - '@App\Repository\PokemonRepositoryInterface'
+            - '@App\Validator\RequestValidator'

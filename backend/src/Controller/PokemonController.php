@@ -6,9 +6,11 @@ use App\Entity\Pokemon;
 use App\Exception\InvalidRequestException;
 use App\Exception\PokemonAlreadyExistsException;
 use App\Exception\PokemonNotFoundException;
+use App\Service\PokemonImageService;
 use App\Service\PokemonService;
 use App\Service\Request\CreatePokemonRequest;
 use App\Service\Request\UpdatePokemonRequest;
+use App\Service\Request\UploadPokemonImageRequest;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -125,17 +127,50 @@ class PokemonController extends Controller
     }
 
     /**
-     * @Route("/api/pokemons/{id}/image", methods={"PATCH"})
+     * @Route("/api/pokemons/{id}/image", methods={"POST"})
      *
      * @param int $id
      * @param PokemonService $pokemonService
      * @return Response
      */
-    public function uploadImage(Request $request, int $id, PokemonService $pokemonService): Response
+    public function uploadImage(Request $request, int $id, PokemonImageService $pokemonImageService): Response
     {
-        var_dump($request->files->all());
-        file_put_contents(Pokemon::IMAGE_UPLOAD_PATH . '/poke.png', $request->getContent(true));
-        return new Response();
+        $image = $request->files->get('image');
+
+        if(empty($image)) {
+            return new JsonResponse(null, Response::HTTP_BAD_REQUEST);
+        }
+
+        $uploadPokemonImageRequest = new UploadPokemonImageRequest($id, $image);
+
+        try {
+            $filename = $pokemonImageService->upload($uploadPokemonImageRequest);
+            return new JsonResponse($filename, Response::HTTP_CREATED);
+        } catch (PokemonNotFoundException $e) {
+            return new JsonResponse($e->getMessage(), Response::HTTP_NOT_FOUND);
+        } catch (InvalidRequestException $e) {
+            return new JsonResponse($e->getViolationListAsArray(), Response::HTTP_BAD_REQUEST);
+        }
     }
+
+    /**
+     * @Route("/api/pokemons/{id}/image", methods={"DELETE"})
+     *
+     * @param Request $request
+     * @param int $id
+     * @param PokemonImageService $pokemonImageService
+     * @return Response
+     */
+    public function deleteImage(Request $request, int $id, PokemonImageService $pokemonImageService): Response
+    {
+        try {
+            $pokemonImageService->delete($id);
+            return new JsonResponse(null, Response::HTTP_OK);
+        } catch (PokemonNotFoundException $e) {
+            return new JsonResponse($e->getMessage(), Response::HTTP_NOT_FOUND);
+        }
+    }
+
+
 
 }

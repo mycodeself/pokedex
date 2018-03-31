@@ -10,6 +10,8 @@ use App\Repository\PokemonRepositoryInterface;
 use App\Service\Request\CreatePokemonRequest;
 use App\Service\Request\RequestInterface;
 use App\Service\Request\UpdatePokemonRequest;
+use App\Service\Request\UploadPokemonImageRequest;
+use App\Validator\RequestValidator;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 /**
@@ -23,18 +25,18 @@ class PokemonService
     private $pokemonRepository;
 
     /**
-     * @var ValidatorInterface
+     * @var RequestValidator
      */
     private $validator;
 
     /**
      * PokemonService constructor.
      * @param PokemonRepositoryInterface $pokemonRepository
-     * @param ValidatorInterface $validatorInterface
+     * @param RequestValidator $validatorInterface
      */
     public function __construct(
         PokemonRepositoryInterface $pokemonRepository,
-        ValidatorInterface $validator
+        RequestValidator $validator
     )
     {
         $this->pokemonRepository = $pokemonRepository;

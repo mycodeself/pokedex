@@ -1,7 +1,6 @@
 import {fromJS} from "immutable";
 import {POKEMONS_FETCHED} from "../actions/pokemonActions";
 
-
 const initialState = fromJS({
   data: []
 });
