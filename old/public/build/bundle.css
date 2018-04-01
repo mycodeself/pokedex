@@ -1,0 +1,142 @@
+html, body {
+  outline: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  height: 100%;
+  width: 100%; }
+
+main {
+  height: 700px;
+  width: 100%; }
+
+.pokedex {
+  background-color: #dc0a2d;
+  height: 100%;
+  width: 100%; }
+  @media (min-width: 37.5em) {
+    .pokedex {
+      width: 600px; } }
+  .pokedex .top-side {
+    width: 100%;
+    height: 15%;
+    background-color: #b01e30;
+    align-items: center;
+    display: flex; }
+    .pokedex .top-side .sphere {
+      height: 64px;
+      width: 64px;
+      border-radius: 50%;
+      background-color: #28aafd;
+      border: 4px solid #ebebeb;
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: 24px; }
+
+.top-button--red, .top-button--yellow, .top-button--green {
+  height: 18px;
+  width: 18px;
+  border-radius: 50%;
+  margin: 0.4em;
+  cursor: pointer; }
+
+.top-buttons {
+  display: flex;
+  margin-left: 1em;
+  margin-bottom: auto; }
+
+.top-button--red {
+  background-color: red; }
+
+.top-button--yellow {
+  background-color: yellow; }
+
+.top-button--green {
+  background-color: green; }
+
+.button-option--red, .button-option--blue {
+  width: 46px;
+  height: 8px;
+  border-radius: 25%;
+  cursor: pointer; }
+
+.button-option--red {
+  background-color: #ff002b; }
+
+.button-option--blue {
+  background-color: #28aafd; }
+
+.bottom-button--black {
+  cursor: pointer;
+  height: 48px;
+  width: 48px;
+  background-color: #404040;
+  border-radius: 50%; }
+
+.dpad {
+  position: relative;
+  height: 80px;
+  width: 80px; }
+
+.dpad-horizontal {
+  cursor: pointer;
+  background: #404040;
+  height: 24px;
+  width: 80px;
+  z-index: 3;
+  margin: auto;
+  position: absolute;
+  top: 28px; }
+
+.dpad-vertical {
+  cursor: pointer;
+  background: #404040;
+  height: 80px;
+  width: 24px;
+  z-index: 3;
+  margin: auto;
+  position: absolute;
+  left: 28px; }
+
+.screen-container {
+  background-color: #dfdfdf;
+  width: 90%;
+  height: 50%;
+  border-radius: 5%;
+  display: block;
+  margin: auto;
+  position: relative; }
+
+.screen {
+  background-color: #232323;
+  border-radius: 5%;
+  width: 75%;
+  height: 70%;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  margin-top: 1em; }
+
+.bottom-side {
+  height: 35%;
+  width: 100%;
+  padding-top: 10%; }
+
+.bottom-buttons-container {
+  display: flex;
+  justify-content: space-around; }
+
+.buttons-option {
+  display: flex;
+  width: 110px;
+  justify-content: space-between; }
+
+.bottom-screen {
+  background-color: #51ae5f;
+  width: 210px;
+  height: 64px;
+  border-radius: 10px;
+  margin-left: 25%;
+  margin-top: -6%; }

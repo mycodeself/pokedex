@@ -22,11 +22,10 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <main>
         {(this.state.isLoading) ? 'Loading...' : null}
-        <h1>Hello world from ReactJS</h1>
         <PokemonList pokemons={this.props.pokemons}/>
-      </div>
+      </main>
     )
   }
 }

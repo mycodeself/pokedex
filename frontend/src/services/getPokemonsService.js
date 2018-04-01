@@ -1,5 +1,7 @@
+import {API_ENDPOINT} from "../constants";
+
 export default function getPokemonsService() {
-  const route = 'http://0.0.0.0/api/pokemons';
+  const route = `${API_ENDPOINT}/pokemons`
   const headers = new Headers({
     'Content-Type': 'application/json',
   });

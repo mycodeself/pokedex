@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import PokemonItem from "./PokemonItem";
 
 const propTypes = {
   pokemons: PropTypes.array.isRequired
@@ -13,8 +14,8 @@ class PokemonList extends React.Component {
 
   render() {
     return (
-      <div>
-        {this.props.pokemons.map(pokemon => <div>{pokemon.name}</div>)}
+      <div className="pokemon-list">
+        {this.props.pokemons.map(pokemon => <PokemonItem pokemon={pokemon}/>)}
       </div>
     )
   }
