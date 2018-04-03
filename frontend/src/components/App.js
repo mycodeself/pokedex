@@ -1,5 +1,7 @@
 import React from 'react'
+
 import PokemonList from "./PokemonList";
+import PokemonOverlay from "../containers/PokemonOverlayContainer";
 
 class App extends React.Component {
   constructor(props) {
@@ -25,6 +27,7 @@ class App extends React.Component {
       <main>
         {(this.state.isLoading) ? 'Loading...' : null}
         <PokemonList pokemons={this.props.pokemons}/>
+        <PokemonOverlay />
       </main>
     )
   }

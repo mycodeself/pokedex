@@ -1,11 +1,17 @@
-.icon {
-  font-size: 24px
+.icon--white {
+  color: white;
 }
 
-.icon-l {
+.icon {
+  font-size: 24px;
+  opacity: 0.9;
+  color: $black--light;
+}
+
+.icon--l {
   font-size: 32px;
 }
 
-.icon-xl {
+.icon--xl {
   font-size: 64px;
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import FavouriteIcon from "./icons/FavouriteIcon";
+import PokemonItemOptions from "../containers/PokemonItemOptionsContainer";
 
 const PokemonItem = ({pokemon}) => {
   return (
@@ -7,13 +7,8 @@ const PokemonItem = ({pokemon}) => {
       <div className="pokemon-item__block">
         <div className="pokemon-item__image">
           <img src="../../assets/images/svg/pokeball.svg" />
-          <em className="icon icon-trash"></em>
-          <em className="icon icon-edit"></em>
-          <FavouriteIcon/>
         </div>
-        <div className="pokemon-item__icons">
-
-        </div>
+        <PokemonItemOptions pokemon={pokemon}/>
         <h1>{pokemon.name}</h1>
         <p>{pokemon.firstType} {pokemon.secondType}</p>
       </div>

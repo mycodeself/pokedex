@@ -1,82 +1,8 @@
-// Top side buttons
-%top-button {
-  height: 18px;
-  width: 18px;
-  border-radius: 50%;
-  margin: 0.4em;
-  cursor: pointer;
-}
-
-.top-buttons {
-  display: flex;
-  margin-left: 1em;
-  margin-bottom: auto;
-}
-
-.top-button--red {
-  @extend %top-button;
-  background-color: red;
-}
-
-.top-button--yellow {
-  @extend %top-button;
-  background-color: yellow;
-}
-
-.top-button--green {
-  @extend %top-button;
-  background-color: green;
-}
-
-%button-option {
-  width: 46px;
-  height: 8px;
-  border-radius: 25%;
-  cursor: pointer;
-}
-
-.button-option--red {
-  @extend %button-option;
-  background-color: #ff002b;
-}
-
-.button-option--blue {
-  @extend %button-option;
-  background-color: #28aafd;
-}
-
-.bottom-button--black {
-  cursor: pointer;
-  height: 48px;
-  width: 48px;
-  background-color: $black--light;
-  border-radius: 50%;
-}
-
-.dpad {
-  position: relative;
-  height: 80px;
-  width: 80px;
-}
-
-.dpad-horizontal {
-  cursor: pointer;
-  background: $black--light;
-  height: 24px;
-  width: 80px;
-  z-index: 3;
-  margin: auto;
-  position: absolute;
-  top: 28px;
-}
-
-.dpad-vertical {
-  cursor: pointer;
-  background: $black--light;
-  height: 80px;
-  width: 24px;
-  z-index: 3;
-  margin: auto;
-  position: absolute;
-  left: 28px;
+.button {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor:pointer;
+  overflow: hidden;
+  outline:none;
 }

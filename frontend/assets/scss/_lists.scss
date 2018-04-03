@@ -5,7 +5,6 @@
 
   .pokemon-item {
     flex: 1;
-    border: 1px solid black;
     min-width: 200px;
     position: relative;
     justify-content: center;
@@ -24,6 +23,15 @@
 
       .pokemon-item__image {
         width: 160px;
+      }
+
+      .pokemon-item__options {
+        background-color: rgba(100, 100, 100, 0.15);
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-around;
+        height: 30px;
+        align-items: center;
       }
     }
 
