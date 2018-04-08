@@ -46,6 +46,7 @@
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/symfony/yaml" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/zendframework/zend-code" />
       <excludeFolder url="file://$MODULE_DIR$/backend/vendor/zendframework/zend-eventmanager" />
+      <excludeFolder url="file://$MODULE_DIR$/frontend/public/build" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

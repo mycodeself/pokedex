@@ -1,12 +1,16 @@
 import React from 'react'
 import PokemonItemOptions from "../containers/PokemonItemOptionsContainer";
+import {POKEMONS_IMAGE_URL} from "../constants";
 
 const PokemonItem = ({pokemon}) => {
+  const imageSrc = (pokemon.image)
+    ? `${POKEMONS_IMAGE_URL}/${pokemon.image}`
+    : '../../assets/images/svg/pokeball.svg';
   return (
     <div className="pokemon-item">
       <div className="pokemon-item__block">
         <div className="pokemon-item__image">
-          <img src="../../assets/images/svg/pokeball.svg" />
+          <img src={imageSrc} />
         </div>
         <PokemonItemOptions pokemon={pokemon}/>
         <h1>{pokemon.name}</h1>

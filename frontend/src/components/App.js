@@ -2,6 +2,7 @@ import React from 'react'
 
 import PokemonList from "./PokemonList";
 import PokemonOverlay from "../containers/PokemonOverlayContainer";
+import NavBar from "./NavBar";
 
 class App extends React.Component {
   constructor(props) {
@@ -24,11 +25,14 @@ class App extends React.Component {
 
   render() {
     return (
-      <main>
-        {(this.state.isLoading) ? 'Loading...' : null}
-        <PokemonList pokemons={this.props.pokemons}/>
-        <PokemonOverlay />
-      </main>
+      <div>
+        <NavBar/>
+        <main>
+          {(this.state.isLoading) ? 'Loading...' : null}
+          <PokemonList pokemons={this.props.pokemons}/>
+          <PokemonOverlay />
+        </main>
+      </div>
     )
   }
 }
