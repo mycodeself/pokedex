@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 
 import PokemonOverlay from "../components/PokemonOverlay";
-import {closeOverlay} from "../actions/pokemonActions";
+import {closeOverlay, createPokemon} from "../actions/pokemonActions";
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -13,7 +13,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    close: () => {dispatch(closeOverlay())}
+    close: () => {dispatch(closeOverlay())},
+    createPokemon: (pokemon) => {dispatch(createPokemon(pokemon))}
   }
 };
 

@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 
 import PokemonItemOptions from "../components/PokemonItemOptions";
-import {openOverlay} from "../actions/pokemonActions";
+import {deletePokemon, openOverlay} from "../actions/pokemonActions";
 
 const mapStateToProps = (state, ownProps) => {
   return {
@@ -10,7 +10,8 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    openOverlay: (isEditing, pokemon) => {dispatch(openOverlay(isEditing, pokemon))}
+    openOverlay: (isEditing, pokemon) => {dispatch(openOverlay(isEditing, pokemon))},
+    deletePokemon: (pokemonId) => {return dispatch(deletePokemon(pokemonId))}
   }
 };
 

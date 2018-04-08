@@ -110,7 +110,7 @@ class CreatePokemonRequest implements RequestInterface
     {
         return new static(
             isset($data['name']) ? $data['name'] : '',
-            isset($data['shortDescription']) ? $data['shortDescription'] : '',
+            isset($data['description']) ? $data['description'] : '',
             isset($data['firstType']) ? $data['firstType'] : '',
             isset($data['secondType']) ? $data['secondType'] : '',
             isset($data['evolutionId']) ? $data['evolutionId'] : null
