@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types';
+import SvgIcon from "../icons/SvgIcon";
 
 const propTypes = {
   onChange: PropTypes.func,
@@ -32,7 +33,7 @@ class ImageInput extends React.Component {
     reader.onloadend = (event) => {
       const result = reader.result;
       this.setState({image: result});
-      this.props.onChange(result);
+      this.props.onChange(file);
     }
   }
 
@@ -42,7 +43,7 @@ class ImageInput extends React.Component {
       <div className="form-group">
         <div className="image-file-input">
           <div className="edit-option">
-            <em className="icon icon-edit"></em>
+            <SvgIcon name="edit"/>
           </div>
           {
             (this.state.image)
@@ -61,7 +62,9 @@ class ImageInput extends React.Component {
       </div>
     )
   }
-
 }
+
+ImageInput.propTypes = propTypes;
+ImageInput.defaultProps = defaultProps;
 
 export default ImageInput

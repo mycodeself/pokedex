@@ -137,8 +137,10 @@ class PokemonController extends Controller
     {
         $image = $request->files->get('image');
 
+        var_dump($image);
+
         if(empty($image)) {
-            return new JsonResponse(null, Response::HTTP_BAD_REQUEST);
+            return new JsonResponse(null, Response::HTTP_LOCKED);
         }
 
         $uploadPokemonImageRequest = new UploadPokemonImageRequest($id, $image);
