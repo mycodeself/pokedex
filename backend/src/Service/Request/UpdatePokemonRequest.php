@@ -19,7 +19,7 @@ class UpdatePokemonRequest extends CreatePokemonRequest
     public function __construct(
         int $id,
         string $name,
-        string $shortDescription,
+        string $description,
         string $firstType,
         string $secondType,
         ?int $evolutionId = null
@@ -28,7 +28,7 @@ class UpdatePokemonRequest extends CreatePokemonRequest
         $this->id = $id;
         parent::__construct(
             $name,
-            $shortDescription,
+            $description,
             $firstType,
             $secondType,
             $evolutionId
@@ -51,7 +51,7 @@ class UpdatePokemonRequest extends CreatePokemonRequest
         return new static (
             isset($data['id']) ? (int) $data['id'] : 0,
             isset($data['name']) ? $data['name'] : '',
-            isset($data['shortDescription']) ? $data['shortDescription'] : '',
+            isset($data['description']) ? $data['description'] : '',
             isset($data['firstType']) ? $data['firstType'] : '',
             isset($data['secondType']) ? $data['secondType'] : '',
             isset($data['evolutionId']) ? (int) $data['evolutionId'] : 0

@@ -11,7 +11,7 @@ App\Entity\Pokemon:
     name:
       type: string
       length: 24
-    shortDescription:
+    description:
       type: string
       length: 255
     image:

@@ -24,7 +24,7 @@ class Pokemon implements JsonSerializable
     /**
      * @var string
      */
-    private $shortDescription;
+    private $description;
 
     /**
      * @var PokemonTypes
@@ -44,14 +44,14 @@ class Pokemon implements JsonSerializable
     /**
      * Pokemon constructor.
      * @param string $name
-     * @param string $shortDescription
+     * @param string $description
      * @param PokemonTypes $type
      * @param Pokemon|null $evolution
      */
-    public function __construct(string $name, string $shortDescription, PokemonTypes $type, ?Pokemon $evolution = null)
+    public function __construct(string $name, string $description, PokemonTypes $type, ?Pokemon $evolution = null)
     {
         $this->name = $name;
-        $this->shortDescription = $shortDescription;
+        $this->description = $description;
         $this->types = $type;
         $this->evolution = $evolution;
         $this->image = '';
@@ -76,9 +76,9 @@ class Pokemon implements JsonSerializable
     /**
      * @return string
      */
-    public function shortDescription(): string
+    public function description(): string
     {
-        return $this->shortDescription;
+        return $this->description;
     }
 
     /**
@@ -114,11 +114,11 @@ class Pokemon implements JsonSerializable
     }
 
     /**
-     * @param string $shortDescription
+     * @param string $description
      */
-    public function updateShortDescription(string $shortDescription): void
+    public function updateDescription(string $description): void
     {
-        $this->shortDescription = $shortDescription;
+        $this->description = $description;
     }
 
     /**
@@ -157,7 +157,7 @@ class Pokemon implements JsonSerializable
         return [
             'id' => $this->id(),
             'name' => $this->name(),
-            'shortDescription' => $this->shortDescription(),
+            'description' => $this->description(),
             'firstType' => $this->types()->primaryType(),
             'secondType' => $this->types()->secondaryType(),
             'evolution' => $this->evolution(),

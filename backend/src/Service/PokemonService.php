@@ -89,7 +89,7 @@ class PokemonService
         $pokemon = $this->pokemonRepository->getById($request->id());
 
         $pokemon->updateName($request->name());
-        $pokemon->updateShortDescription($request->shortDescription());
+        $pokemon->updateDescription($request->shortDescription());
         $pokemon->updateTypes(new PokemonTypes($request->firstType(), $request->secondType()));
 
         if(!empty($request->evolutionId())) {

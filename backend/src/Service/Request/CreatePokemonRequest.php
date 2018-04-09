@@ -22,7 +22,7 @@ class CreatePokemonRequest implements RequestInterface
      * @Assert\NotBlank()
      * @Assert\Length(min="30")
      */
-    protected $shortDescription;
+    protected $description;
 
     /**
      * @var string
@@ -42,21 +42,21 @@ class CreatePokemonRequest implements RequestInterface
     /**
      * CreatePokemonRequest constructor.
      * @param string $name
-     * @param string $shortDescription
+     * @param string $description
      * @param string $firstType
      * @param string $secondType
      * @param int $evolutionId
      */
     public function __construct(
         string $name,
-        string $shortDescription,
+        string $description,
         string $firstType,
         string $secondType = '',
         ?int $evolutionId = null
     )
     {
         $this->name = $name;
-        $this->shortDescription = $shortDescription;
+        $this->description = $description;
         $this->firstType = $firstType;
         $this->secondType = $secondType;
         $this->evolutionId = $evolutionId;
@@ -75,7 +75,7 @@ class CreatePokemonRequest implements RequestInterface
      */
     public function shortDescription(): string
     {
-        return $this->shortDescription;
+        return $this->description;
     }
 
     /**
