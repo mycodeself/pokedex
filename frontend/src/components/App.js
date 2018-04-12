@@ -2,7 +2,7 @@ import React from 'react'
 
 import PokemonList from "./PokemonList";
 import PokemonOverlay from "../containers/PokemonOverlayContainer";
-import NavBar from "./NavBar";
+import NavBar from "../containers/NavBarContainer";
 
 class App extends React.Component {
   constructor(props) {

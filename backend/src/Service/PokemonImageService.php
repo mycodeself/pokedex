@@ -54,7 +54,7 @@ class PokemonImageService
         $this->deleteImage($pokemon->image());
 
         $file = $request->image();
-        $fileName = $pokemon->name() . '.' . $file->guessExtension();
+        $fileName = $pokemon->name() . uniqid() . '.' . $file->guessExtension();
 
         $file->move(Pokemon::IMAGE_UPLOAD_PATH, $fileName);
         $pokemon->updateImage($fileName);
@@ -77,7 +77,7 @@ class PokemonImageService
     /**
      * @param string $fileName
      */
-    private function deleteImage(string $fileName): void
+    public function deleteImage(string $fileName): void
     {
         if(!empty($fileName)) {
             $filePath = Pokemon::IMAGE_UPLOAD_PATH . '/' . $fileName;

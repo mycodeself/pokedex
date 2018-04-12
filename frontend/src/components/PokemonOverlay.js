@@ -17,7 +17,11 @@ class PokemonOverlay extends React.Component {
             <em className="icon-close icon--white icon--l"></em>
           </Button>
         </div>
-        <PokemonForm onSubmit={this.props.createPokemon} />
+        <PokemonForm
+          isEditing={this.props.isEditing}
+          pokemon={this.props.pokemon}
+          onSubmit={this.props.createOrUpdatePokemon}
+        />
       </section>
     )
   }

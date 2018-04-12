@@ -30,17 +30,24 @@ class PokemonService
     private $validator;
 
     /**
+     * @var PokemonImageService
+     */
+    private $pokemonImageService;
+
+    /**
      * PokemonService constructor.
      * @param PokemonRepositoryInterface $pokemonRepository
      * @param RequestValidator $validatorInterface
      */
     public function __construct(
         PokemonRepositoryInterface $pokemonRepository,
-        RequestValidator $validator
+        RequestValidator $validator,
+        PokemonImageService $pokemonImageService
     )
     {
         $this->pokemonRepository = $pokemonRepository;
         $this->validator = $validator;
+        $this->pokemonImageService = $pokemonImageService;
     }
 
     /**
@@ -52,7 +59,7 @@ class PokemonService
      */
     public function create(CreatePokemonRequest $request): Pokemon
     {
-        $this->validate($request);
+        $this->validator->validate($request);
 
         if($this->pokemonRepository->findByName($request->name())) {
            throw new PokemonAlreadyExistsException($request->name());
@@ -84,7 +91,7 @@ class PokemonService
      */
     public function update(UpdatePokemonRequest $request): void
     {
-        $this->validate($request);
+        $this->validator->validate($request);
 
         $pokemon = $this->pokemonRepository->getById($request->id());
 
@@ -101,25 +108,14 @@ class PokemonService
     }
 
     /**
-     * @param RequestInterface $request
-     * @throws InvalidRequestException
-     */
-    private function validate(RequestInterface $request): void
-    {
-        $violationList = $this->validator->validate($request);
-
-        if(count($violationList) > 0) {
-            throw new InvalidRequestException($violationList);
-        }
-    }
-
-    /**
      * @param int $id
      * @throws PokemonNotFoundException
      */
     public function delete(int $id): void
     {
         $pokemon = $this->pokemonRepository->getById($id);
+
+        $this->pokemonImageService->deleteImage($pokemon->image());
 
         $this->pokemonRepository->remove($pokemon);
     }

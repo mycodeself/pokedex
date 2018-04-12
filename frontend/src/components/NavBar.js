@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from "./buttons/Button";
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -10,7 +11,15 @@ class NavBar extends React.Component {
     return (
       <nav>
         <h1>Pokedex</h1>
-        <input type="text" name="search" placeholder="Type to search..." />
+        <input
+          type="text"
+          name="search"
+          placeholder="Type to search..."
+          onChange={(event) => this.props.searchPokemons(event.target.value)}
+        />
+        <Button onClick={this.props.openOverlay}>
+          <em className="icon icon-plus"></em>
+        </Button>
       </nav>
     )
   }

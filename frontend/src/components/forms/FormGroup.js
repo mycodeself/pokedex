@@ -40,6 +40,8 @@ class FormGroup extends React.Component {
   }
 
   render() {
+    const value = this.props.value ? this.props.value : this.state.value;
+
     return (
       <div className="form-group">
         {
@@ -48,7 +50,7 @@ class FormGroup extends React.Component {
                 placeholder={this.props.placeholder}
                 name={this.props.name}
                 id={this.props.name}
-                value={this.state.value}
+                value={value}
                 onChange={this.handleChange}
               >
               </textarea>
@@ -57,14 +59,14 @@ class FormGroup extends React.Component {
                 name={this.props.name}
                 id={this.props.name}
                 placeholder={this.props.placeholder}
-                value={this.state.value}
+                value={value}
                 onChange={this.handleChange}
               />
         }
         <label htmlFor={this.props.name}>{this.props.label}</label>
         {
           (this.props.constraints)
-            ? <InputValidator constraints={this.props.constraints} value={this.state.value}/>
+            ? <InputValidator constraints={this.props.constraints} value={value}/>
             : null
         }
       </div>

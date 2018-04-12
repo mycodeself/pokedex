@@ -42,3 +42,21 @@ services:
         arguments:
             - '@App\Repository\PokemonRepositoryInterface'
             - '@App\Validator\RequestValidator'
+
+
+    # Serializer
+    Symfony\Component\Serializer\Encoder\JsonEncoder:
+
+    App\Serializer\Normalizer\PokemonNormalizer:
+        arguments:
+            - '@request_stack'
+
+    Symfony\Component\Serializer\Serializer:
+                arguments:
+                    0:
+                        - '@App\Serializer\Normalizer\PokemonNormalizer'
+                    1:
+                        - '@Symfony\Component\Serializer\Encoder\JsonEncoder'
+
+
+

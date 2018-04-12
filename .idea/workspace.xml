@@ -2,19 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a85d3ec3-ea6b-4f1c-b208-3d81f9825f4e" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/assets/scss/_navbar.scss" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/components/NavBar.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/backend/src/Serializer/Normalizer/PokemonNormalizer.php" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/frontend/src/services/putPokemonService.js" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/pokedex.iml" afterPath="$PROJECT_DIR$/.idea/pokedex.iml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/backend/public/uploads/pokemons/Bulbasur.jpeg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/backend/composer.json" afterPath="$PROJECT_DIR$/backend/composer.json" />
+      <change beforePath="$PROJECT_DIR$/backend/composer.lock" afterPath="$PROJECT_DIR$/backend/composer.lock" />
+      <change beforePath="$PROJECT_DIR$/backend/config/services.yaml" afterPath="$PROJECT_DIR$/backend/config/services.yaml" />
+      <change beforePath="$PROJECT_DIR$/backend/public/uploads/pokemons/Charmander.png" afterPath="" />
       <change beforePath="$PROJECT_DIR$/backend/src/Controller/PokemonController.php" afterPath="$PROJECT_DIR$/backend/src/Controller/PokemonController.php" />
-      <change beforePath="$PROJECT_DIR$/frontend/assets/scss/_base.scss" afterPath="$PROJECT_DIR$/frontend/assets/scss/_base.scss" />
-      <change beforePath="$PROJECT_DIR$/frontend/assets/scss/index.scss" afterPath="$PROJECT_DIR$/frontend/assets/scss/index.scss" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Entity/Pokemon.php" afterPath="$PROJECT_DIR$/backend/src/Entity/Pokemon.php" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Service/PokemonImageService.php" afterPath="$PROJECT_DIR$/backend/src/Service/PokemonImageService.php" />
+      <change beforePath="$PROJECT_DIR$/backend/src/Service/PokemonService.php" afterPath="$PROJECT_DIR$/backend/src/Service/PokemonService.php" />
+      <change beforePath="$PROJECT_DIR$/backend/symfony.lock" afterPath="$PROJECT_DIR$/backend/symfony.lock" />
+      <change beforePath="$PROJECT_DIR$/frontend/.babelrc" afterPath="$PROJECT_DIR$/frontend/.babelrc" />
+      <change beforePath="$PROJECT_DIR$/frontend/assets/scss/_icons.scss" afterPath="$PROJECT_DIR$/frontend/assets/scss/_icons.scss" />
+      <change beforePath="$PROJECT_DIR$/frontend/assets/scss/_navbar.scss" afterPath="$PROJECT_DIR$/frontend/assets/scss/_navbar.scss" />
+      <change beforePath="$PROJECT_DIR$/frontend/assets/scss/_overlays.scss" afterPath="$PROJECT_DIR$/frontend/assets/scss/_overlays.scss" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" afterPath="$PROJECT_DIR$/frontend/package-lock.json" />
+      <change beforePath="$PROJECT_DIR$/frontend/package.json" afterPath="$PROJECT_DIR$/frontend/package.json" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" afterPath="$PROJECT_DIR$/frontend/public/index.html" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/actions/pokemonActions.js" afterPath="$PROJECT_DIR$/frontend/src/actions/pokemonActions.js" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/App.js" afterPath="$PROJECT_DIR$/frontend/src/components/App.js" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/NavBar.js" afterPath="$PROJECT_DIR$/frontend/src/components/NavBar.js" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/PokemonItem.js" afterPath="$PROJECT_DIR$/frontend/src/components/PokemonItem.js" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/PokemonList.js" afterPath="$PROJECT_DIR$/frontend/src/components/PokemonList.js" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/PokemonOverlay.js" afterPath="$PROJECT_DIR$/frontend/src/components/PokemonOverlay.js" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/forms/FormGroup.js" afterPath="$PROJECT_DIR$/frontend/src/components/forms/FormGroup.js" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/forms/ImageInput.js" afterPath="$PROJECT_DIR$/frontend/src/components/forms/ImageInput.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/constants/index.js" afterPath="$PROJECT_DIR$/frontend/src/constants/index.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/services/postPokemonImageService.js" afterPath="$PROJECT_DIR$/frontend/src/services/postPokemonImageService.js" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/forms/PokemonForm.js" afterPath="$PROJECT_DIR$/frontend/src/components/forms/PokemonForm.js" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/AppContainer.js" afterPath="$PROJECT_DIR$/frontend/src/containers/AppContainer.js" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/NavBarContainer.js" afterPath="$PROJECT_DIR$/frontend/src/containers/NavBarContainer.js" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/PokemonOverlayContainer.js" afterPath="$PROJECT_DIR$/frontend/src/containers/PokemonOverlayContainer.js" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" afterPath="$PROJECT_DIR$/frontend/src/index.js" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/reducer/pokemonReducer.js" afterPath="$PROJECT_DIR$/frontend/src/reducer/pokemonReducer.js" />
+      <change beforePath="$PROJECT_DIR$/frontend/webpack.config.js" afterPath="$PROJECT_DIR$/frontend/webpack.config.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,78 +50,13 @@
     <pharConfigPath>$PROJECT_DIR$/backend/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="27" column="2" lean-forward="false" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_base.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/assets/scss/_base.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_navbar.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/assets/scss/_navbar.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_overlays.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/assets/scss/_overlays.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/assets/scss/index.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="98">
-              <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NavBar.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/NavBar.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="12" column="71" lean-forward="false" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
-              <folding>
-                <element signature="n#!!block;n#constructor#0;n#NavBar#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JavaScript File" />
         <option value="SCSS File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -107,8 +65,14 @@
       <find>adoramedia</find>
       <find>field</find>
       <find>type</find>
+      <find>&quot;</find>
+      <find>console.war</find>
       <find>console.log</find>
+      <find>console</find>
     </findStrings>
+    <replaceStrings>
+      <replace>'</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -116,57 +80,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/backend/config/packages/translation.yaml" />
-        <option value="$PROJECT_DIR$/frontend/package.json" />
-        <option value="$PROJECT_DIR$/frontend/webpack.config.js" />
-        <option value="$PROJECT_DIR$/frontend/src/reducer/pokemon.js" />
-        <option value="$PROJECT_DIR$/frontend/src/reducer/index.js" />
-        <option value="$PROJECT_DIR$/frontend/src/index.js" />
-        <option value="$PROJECT_DIR$/frontend/src/containers/AppContainer.js" />
-        <option value="$PROJECT_DIR$/backend/src/Entity/Pokemon.php" />
-        <option value="$PROJECT_DIR$/frontend/src/services/getPokemonsService.js" />
-        <option value="$PROJECT_DIR$/frontend/assets/scss/_lists.js" />
-        <option value="$PROJECT_DIR$/frontend/src/components/PokemonList.js" />
-        <option value="$PROJECT_DIR$/frontend/src/components/icons/FavoriteIcon.js" />
-        <option value="$PROJECT_DIR$/frontend/src/components/icons/FavouriteIcon.js" />
-        <option value="$PROJECT_DIR$/frontend/assets/scss/_lists.scss" />
-        <option value="$PROJECT_DIR$/frontend/assets/scss/_buttons.scss" />
         <option value="$PROJECT_DIR$/frontend/src/components/buttons/Button.js" />
         <option value="$PROJECT_DIR$/frontend/assets/scss/utils/_variables.scss" />
-        <option value="$PROJECT_DIR$/frontend/assets/scss/_overlays.scss" />
         <option value="$PROJECT_DIR$/frontend/src/components/Overlay.js" />
         <option value="$PROJECT_DIR$/frontend/src/actions/uiActions.js" />
         <option value="$PROJECT_DIR$/frontend/src/reducer/uiReducer.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/forms/FileInput.js" />
-        <option value="$PROJECT_DIR$/frontend/assets/scss/_icons.scss" />
         <option value="$PROJECT_DIR$/frontend/src/components/forms/PokemonSelect.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/forms/InputValidator.js" />
         <option value="$PROJECT_DIR$/frontend/src/utils/validations.js" />
-        <option value="$PROJECT_DIR$/frontend/src/components/forms/FormGroup.js" />
-        <option value="$PROJECT_DIR$/frontend/public/index.html" />
-        <option value="$PROJECT_DIR$/frontend/src/containers/PokemonOverlayContainer.js" />
-        <option value="$PROJECT_DIR$/backend/src/Service/Request/CreatePokemonRequest.php" />
         <option value="$PROJECT_DIR$/frontend/src/services/postPokemonService.js" />
         <option value="$PROJECT_DIR$/frontend/src/containers/PokemonItemOptionsContainer.js" />
         <option value="$PROJECT_DIR$/frontend/src/services/deletePokemonService.js" />
-        <option value="$PROJECT_DIR$/frontend/src/reducer/pokemonReducer.js" />
-        <option value="$PROJECT_DIR$/frontend/src/components/PokemonOverlay.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/icons/Icon.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/icons/SvgIcon.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/PokemonItemOptions.js" />
         <option value="$PROJECT_DIR$/frontend/assets/scss/_forms.scss" />
-        <option value="$PROJECT_DIR$/frontend/src/components/forms/PokemonForm.js" />
-        <option value="$PROJECT_DIR$/frontend/src/actions/pokemonActions.js" />
-        <option value="$PROJECT_DIR$/backend/src/Controller/PokemonController.php" />
         <option value="$PROJECT_DIR$/frontend/src/services/postPokemonImageService.js" />
-        <option value="$PROJECT_DIR$/frontend/src/components/forms/ImageInput.js" />
         <option value="$PROJECT_DIR$/frontend/src/constants/index.js" />
-        <option value="$PROJECT_DIR$/frontend/src/components/PokemonItem.js" />
         <option value="$PROJECT_DIR$/frontend/assets/scss/index.scss" />
-        <option value="$PROJECT_DIR$/frontend/src/components/App.js" />
         <option value="$PROJECT_DIR$/frontend/assets/scss/_base.scss" />
+        <option value="$PROJECT_DIR$/frontend/assets/scss/_overlays.scss" />
+        <option value="$PROJECT_DIR$/frontend/src/components/forms/FormGroup.js" />
+        <option value="$PROJECT_DIR$/backend/src/Service/Request/CreatePokemonRequest.php" />
+        <option value="$PROJECT_DIR$/backend/src/Service/Request/UpdatePokemonRequest.php" />
+        <option value="$PROJECT_DIR$/backend/src/Doctrine/ORM/Pokemon.orm.yml" />
         <option value="$PROJECT_DIR$/frontend/assets/scss/_navbar.scss" />
+        <option value="$PROJECT_DIR$/frontend/src/services/putPokemonService.js" />
+        <option value="$PROJECT_DIR$/frontend/.babelrc" />
+        <option value="$PROJECT_DIR$/frontend/package.json" />
+        <option value="$PROJECT_DIR$/frontend/src/index.js" />
+        <option value="$PROJECT_DIR$/frontend/src/components/PokemonOverlay.js" />
+        <option value="$PROJECT_DIR$/frontend/assets/scss/_icons.scss" />
+        <option value="$PROJECT_DIR$/frontend/webpack.config.js" />
+        <option value="$PROJECT_DIR$/frontend/public/index.html" />
+        <option value="$PROJECT_DIR$/frontend/src/components/PokemonList.js" />
+        <option value="$PROJECT_DIR$/frontend/src/containers/PokemonOverlayContainer.js" />
+        <option value="$PROJECT_DIR$/backend/src/Entity/Pokemon.php" />
+        <option value="$PROJECT_DIR$/backend/config/services.yaml" />
+        <option value="$PROJECT_DIR$/backend/src/Serializer/Normalizer/PokemonNormalizer.php" />
+        <option value="$PROJECT_DIR$/backend/src/Controller/PokemonController.php" />
+        <option value="$PROJECT_DIR$/frontend/src/components/PokemonItem.js" />
+        <option value="$PROJECT_DIR$/backend/src/Service/PokemonImageService.php" />
+        <option value="$PROJECT_DIR$/backend/src/Service/PokemonService.php" />
+        <option value="$PROJECT_DIR$/frontend/src/components/forms/PokemonForm.js" />
+        <option value="$PROJECT_DIR$/frontend/src/components/forms/ImageInput.js" />
+        <option value="$PROJECT_DIR$/frontend/src/components/App.js" />
+        <option value="$PROJECT_DIR$/frontend/src/containers/NavBarContainer.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/NavBar.js" />
+        <option value="$PROJECT_DIR$/frontend/src/actions/pokemonActions.js" />
+        <option value="$PROJECT_DIR$/frontend/src/containers/AppContainer.js" />
+        <option value="$PROJECT_DIR$/frontend/src/reducer/pokemonReducer.js" />
       </list>
     </option>
   </component>
@@ -226,13 +190,22 @@
       <path value="$PROJECT_DIR$/backend/vendor/psr/cache" />
       <path value="$PROJECT_DIR$/backend/vendor/psr/log" />
       <path value="$PROJECT_DIR$/backend/vendor/nelmio/cors-bundle" />
+      <path value="$PROJECT_DIR$/backend/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/backend/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/backend/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/backend/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/serializer-pack" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/serializer" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/inflector" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/property-info" />
+      <path value="$PROJECT_DIR$/backend/vendor/symfony/property-access" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="960" />
-    <option name="y" value="27" />
-    <option name="width" value="960" />
-    <option name="height" value="1053" />
+    <option name="x" value="990" />
+    <option name="y" value="75" />
+    <option name="width" value="952" />
+    <option name="height" value="1052" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -293,6 +266,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -303,73 +278,20 @@
             <path>
               <item name="pokedex" type="b2602c69:ProjectViewProjectNode" />
               <item name="pokedex" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="backend" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="pokedex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pokedex" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="backend" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="pokedex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pokedex" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="backend" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="uploads" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="pokedex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pokedex" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="backend" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="public" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="uploads" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="pokemons" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="pokedex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pokedex" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="backend" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="pokedex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pokedex" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="backend" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Service" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="pokedex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pokedex" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="backend" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Service" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Request" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="pokedex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pokedex" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="pokedex" type="b2602c69:ProjectViewProjectNode" />
               <item name="pokedex" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="pokedex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pokedex" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="assets" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="scss" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="pokedex" type="b2602c69:ProjectViewProjectNode" />
               <item name="pokedex" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="actions" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="pokedex" type="b2602c69:ProjectViewProjectNode" />
@@ -383,13 +305,6 @@
               <item name="pokedex" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="constants" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="pokedex" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pokedex" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="containers" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -397,14 +312,12 @@
               <item name="pokedex" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="services" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="reducer" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -466,34 +379,38 @@
       <workItem from="1522955834265" duration="2458000" />
       <workItem from="1523205058959" duration="1343000" />
       <workItem from="1523218109789" duration="1588000" />
+      <workItem from="1523299680454" duration="2773000" />
+      <workItem from="1523384568144" duration="4993000" />
+      <workItem from="1523484365056" duration="2047000" />
+      <workItem from="1523527751216" duration="7397000" />
+      <workItem from="1523544400937" duration="7500000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64067000" />
+    <option name="totallyTimeSpent" value="88777000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16506922" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19914803" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Atlassian " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -506,12 +423,12 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14376996" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19914803" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Atlassian " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -526,7 +443,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -552,210 +469,173 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/frontend/src/reducer/uiReducer.js" />
-    <entry file="file://$PROJECT_DIR$/frontend/src/containers/AppContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="20" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/forms/ImageInput.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#handleChange#0;n#ImageInput#0" expanded="false" />
-            <element signature="e#640#754#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/node_modules/react-select/dist/react-select.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/node_modules/react-select/scss/control.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/node_modules/react-select/scss/default.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/assets/scss/_icons.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/config/config.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/forms/InputValidator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="25" lean-forward="true" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/utils/validations.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/public/index.html">
+    <entry file="file://$PROJECT_DIR$/frontend/assets/scss/index.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="98">
-          <caret line="7" column="100" lean-forward="false" selection-start-line="7" selection-start-column="100" selection-end-line="7" selection-end-column="100" />
+          <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/services/getPokemonsService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="31" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/forms/FormGroup.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-112">
-          <caret line="13" column="2" lean-forward="false" selection-start-line="13" selection-start-column="2" selection-end-line="13" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/forms/PokemonSelect.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="35" column="4" lean-forward="false" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/services/deletePokemonService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="7" column="56" lean-forward="true" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/reducer/pokemonReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="22" column="25" lean-forward="false" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/icons/FavouriteIcon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/icons/SvgIcon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="3" column="54" lean-forward="false" selection-start-line="3" selection-start-column="54" selection-end-line="3" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/public/uploads/pokemons/.gitignore">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/buttons/Button.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/Entity/Pokemon.php">
+    <entry file="file://$PROJECT_DIR$/frontend/assets/scss/_overlays.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="55" column="7" lean-forward="false" selection-start-line="55" selection-start-column="7" selection-end-line="55" selection-end-column="7" />
-          <folding />
+        <state relative-caret-position="126">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/PokemonItemOptions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+        <state relative-caret-position="70">
+          <caret line="8" column="42" lean-forward="false" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/containers/PokemonItemOptionsContainer.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="13" column="51" lean-forward="false" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
+        <state relative-caret-position="28">
+          <caret line="5" column="45" lean-forward="true" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/public/build/bundle.js">
+    <entry file="file://$PROJECT_DIR$/frontend/src/services/postPokemonImageService.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="11" column="12865" lean-forward="false" selection-start-line="11" selection-start-column="12865" selection-end-line="11" selection-end-column="12865" />
+        <state relative-caret-position="238">
+          <caret line="23" column="23" lean-forward="false" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/index.js">
+    <entry file="file://$PROJECT_DIR$/backend/src/Doctrine/ORM/PokemonTypes.orm.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/services/postPokemonService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="32" column="1" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/assets/scss/_forms.scss">
+    <entry file="file://$PROJECT_DIR$/backend/src/Doctrine/Repository/PokemonRepository.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="84" column="12" lean-forward="false" selection-start-line="84" selection-start-column="12" selection-end-line="84" selection-end-column="12" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/actions/pokemonActions.js">
+    <entry file="file://$PROJECT_DIR$/backend/src/Doctrine/ORM/Pokemon.orm.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="64" column="27" lean-forward="false" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="27" />
-          <folding>
-            <element signature="e#712#813#0" expanded="false" />
-            <element signature="e#751#809#0" expanded="false" />
-            <element signature="e#898#927#0" expanded="false" />
-            <element signature="e#1629#1676#0" expanded="false" />
-            <element signature="e#2139#2194#0" expanded="false" />
-            <element signature="e#2304#2357#0" expanded="false" />
-            <element signature="n#!!block;n#uploadImage#0" expanded="false" />
-            <element signature="e#2666#2783#0" expanded="false" />
-            <element signature="e#2734#2744#0" expanded="false" />
-            <element signature="e#2768#2778#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="182">
+          <caret line="13" column="15" lean-forward="false" selection-start-line="13" selection-start-column="15" selection-end-line="13" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/Exception/InvalidRequestException.php">
+    <entry file="file://$PROJECT_DIR$/backend/src/Service/Request/RequestInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/assets/scss/_navbar.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="22" lean-forward="false" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/services/postPokemonService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/services/putPokemonService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/PokemonOverlay.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
-          <caret line="37" column="20" lean-forward="false" selection-start-line="37" selection-start-column="20" selection-end-line="37" selection-end-column="20" />
+          <caret line="23" column="10" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/.babelrc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="2" column="39" lean-forward="false" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/public/build/dd659ccbb1f80a10c313.hot-update.json" />
+    <entry file="file://$PROJECT_DIR$/frontend/assets/scss/_icons.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="22" column="38" lean-forward="false" selection-start-line="22" selection-start-column="38" selection-end-line="22" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="18" column="14" lean-forward="false" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/public/build/b8f00aa1108fe7ef100e.hot-update.json" />
+    <entry file="file://$PROJECT_DIR$/frontend/public/build/0.b8f00aa1108fe7ef100e.hot-update.js" />
+    <entry file="file://$PROJECT_DIR$/frontend/public/build/bundle.js.map" />
+    <entry file="file://$PROJECT_DIR$/frontend/webpack.config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="10" column="21" lean-forward="false" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="10" column="43" lean-forward="false" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/containers/PokemonOverlayContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="5" column="46" lean-forward="false" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/Service/Request/UploadPokemonImageRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/Service/Request/UpdatePokemonRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="53" column="36" lean-forward="false" selection-start-line="53" selection-start-column="36" selection-end-line="53" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/Service/Request/CreatePokemonRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="51" column="27" lean-forward="false" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -769,106 +649,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/Service/Request/CreatePokemonRequest.php">
+    <entry file="file://$PROJECT_DIR$/backend/config/services.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="756">
-          <caret line="112" column="50" lean-forward="false" selection-start-line="112" selection-start-column="50" selection-end-line="112" selection-end-column="50" />
+        <state relative-caret-position="723">
+          <caret line="58" column="76" lean-forward="false" selection-start-line="58" selection-start-column="76" selection-end-line="58" selection-end-column="76" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+    <entry file="file://$PROJECT_DIR$/backend/src/Entity/Pokemon.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/forms/FormGroup.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="34" column="0" lean-forward="true" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/Serializer/Normalizer/PokemonNormalizer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="294">
-          <caret line="3845" column="4" lean-forward="false" selection-start-line="3845" selection-start-column="4" selection-end-line="3845" selection-end-column="4" />
+          <caret line="49" column="88" lean-forward="true" selection-start-line="49" selection-start-column="14" selection-end-line="49" selection-end-column="88" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/Controller/PokemonController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="140" column="68" lean-forward="false" selection-start-line="140" selection-start-column="68" selection-end-line="140" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/public/uploads/pokemons/Bulbasur.jpeg" />
-    <entry file="file://$PROJECT_DIR$/backend/public/uploads/pokemons/kmalkasdjfklasdfc1.png" />
-    <entry file="file://$PROJECT_DIR$/backend/public/uploads/pokemons/asdadskñasjasñjkasñkj.png" />
-    <entry file="file://$PROJECT_DIR$/frontend/src/constants/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="14">
-          <caret line="1" column="75" lean-forward="false" selection-start-line="1" selection-start-column="75" selection-end-line="1" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/PokemonItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-          <folding>
-            <element signature="e#187#666#0" expanded="false" />
-            <marker date="1523206297620" expanded="true" signature="361:659" ph="..." />
-            <marker date="1523206297620" expanded="true" signature="405:648" ph="..." />
-            <marker date="1523206297620" expanded="true" signature="451:499" ph="..." />
-            <marker date="1523206297620" expanded="true" signature="547:642" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/forms/ImageInput.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="39" column="12" lean-forward="false" selection-start-line="39" selection-start-column="12" selection-end-line="39" selection-end-column="12" />
-          <folding>
-            <element signature="n#!!block;n#handleChange#0;n#ImageInput#0" expanded="false" />
-            <element signature="e#640#754#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/PokemonOverlay.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="4" column="6" lean-forward="false" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding>
-            <element signature="n#!!block;n#render#0;n#PokemonOverlay#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/containers/PokemonOverlayContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="23" column="10" lean-forward="false" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
-          <folding>
-            <element signature="e#435#565#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/Service/PokemonImageService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="47" column="42" lean-forward="false" selection-start-line="47" selection-start-column="42" selection-end-line="47" selection-end-column="42" />
-          <folding>
-            <element signature="e#920#1081#0#PHP" expanded="false" />
-            <element signature="e#1086#1615#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/Service/Request/UploadPokemonImageRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-          <folding>
-            <element signature="e#212#248#0#PHP" expanded="false" />
-            <element signature="e#392#517#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/backend/src/Service/Request/UpdatePokemonRequest.php">
+    <entry file="file://$PROJECT_DIR$/backend/public/uploads/pokemons/Charmander.png" />
+    <entry file="file://$PROJECT_DIR$/backend/public/uploads/pokemons/Bulbasurrr5acf4992b767c.png" />
+    <entry file="file://$PROJECT_DIR$/backend/public/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -876,73 +691,162 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/forms/PokemonForm.js">
+    <entry file="file://$PROJECT_DIR$/backend/src/Service/PokemonImageService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="24" column="21" lean-forward="false" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        <state relative-caret-position="658">
+          <caret line="79" column="20" lean-forward="false" selection-start-line="79" selection-start-column="20" selection-end-line="79" selection-end-column="20" />
           <folding>
-            <element signature="n#!!block;n#handleSubmit#0;n#PokemonForm#0" expanded="false" />
-            <element signature="n#!!block;n#render#0;n#PokemonForm#0" expanded="false" />
+            <element signature="e#1086#1626#0#PHP" expanded="false" />
+            <element signature="e#1717#1887#0#PHP" expanded="false" />
+            <element signature="e#1940#2201#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/services/postPokemonImageService.js">
+    <entry file="file://$PROJECT_DIR$/backend/src/Service/PokemonService.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="23" column="23" lean-forward="false" selection-start-line="23" selection-start-column="23" selection-end-line="23" selection-end-column="23" />
+        <state relative-caret-position="504">
+          <caret line="113" column="0" lean-forward="false" selection-start-line="113" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
+          <folding>
+            <element signature="e#1012#1352#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/src/Controller/PokemonController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="126" column="34" lean-forward="false" selection-start-line="126" selection-start-column="34" selection-end-line="126" selection-end-column="34" />
+          <folding>
+            <element signature="e#960#1864#0#PHP" expanded="false" />
+            <element signature="e#4581#5502#0#PHP" expanded="false" />
+            <element signature="e#5725#6105#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/backend/.composer/cache/repo/https---packagist.org/packages.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/assets/scss/_overlays.scss">
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/forms/ImageInput.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="-271">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!block;n#constructor#0;n#ImageInput#0" expanded="false" />
+            <element signature="n#!!block;n#componentWillReceiveProps#0;n#ImageInput#0" expanded="false" />
+            <element signature="n#!!block;n#getFile#0;n#ImageInput#0" expanded="false" />
+            <element signature="n#!!block;n#handleChange#0;n#ImageInput#0" expanded="false" />
+            <element signature="e#781#895#0" expanded="false" />
+            <element signature="n#!!block;n#render#0;n#ImageInput#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/forms/PokemonForm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="62" column="12" lean-forward="false" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
+          <folding>
+            <element signature="n#!!block;n#componentWillReceiveProps#0;n#PokemonForm#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/PokemonList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="19" column="10" lean-forward="false" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/PokemonItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="10" column="55" lean-forward="false" selection-start-line="10" selection-start-column="55" selection-end-line="10" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/reducer/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#49#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/actions/pokemonActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="152" column="4" lean-forward="false" selection-start-line="152" selection-start-column="4" selection-end-line="152" selection-end-column="4" />
+          <folding>
+            <element signature="e#1130#1159#0" expanded="false" />
+            <element signature="e#3492#3547#0" expanded="false" />
+            <element signature="e#3657#3710#0" expanded="false" />
+            <element signature="n#!!block;n#searched#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/containers/AppContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="7" column="48" lean-forward="false" selection-start-line="7" selection-start-column="48" selection-end-line="7" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/reducer/pokemonReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="25" column="79" lean-forward="false" selection-start-line="25" selection-start-column="79" selection-end-line="25" selection-end-column="79" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/App.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="27" column="2" lean-forward="false" selection-start-line="27" selection-start-column="2" selection-end-line="27" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/assets/scss/_base.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="15" column="19" lean-forward="false" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/assets/scss/index.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="7" column="15" lean-forward="false" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/assets/scss/_navbar.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
+        <state relative-caret-position="140">
+          <caret line="28" column="11" lean-forward="false" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/NavBar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="12" column="71" lean-forward="false" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
+        <state relative-caret-position="182">
+          <caret line="17" column="59" lean-forward="false" selection-start-line="17" selection-start-column="59" selection-end-line="17" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/containers/NavBarContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="7" lean-forward="false" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
           <folding>
-            <element signature="n#!!block;n#constructor#0;n#NavBar#0" expanded="true" />
+            <element signature="e#0#37#0" expanded="true" />
+            <element signature="e#199#217#0" expanded="true" />
+            <element signature="e#261#392#0" expanded="true" />
           </folding>
         </state>
       </provider>

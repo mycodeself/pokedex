@@ -16,6 +16,7 @@ use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\Serializer\Serializer;
 
 
 /**
@@ -31,7 +32,7 @@ class PokemonController extends Controller
      * @param PokemonService $pokemonService
      * @return Response
      */
-    public function createAction(Request $request, PokemonService $pokemonService): Response
+    public function createAction(Request $request, PokemonService $pokemonService, Serializer $serializer): Response
     {
         $data = json_decode($request->getContent(), true);
 
@@ -39,7 +40,8 @@ class PokemonController extends Controller
 
         try {
             $pokemon = $pokemonService->create($createPokemonRequest);
-            return new JsonResponse($pokemon, Response::HTTP_CREATED);
+            $pokemonJson = $serializer->serialize($pokemon, 'json');
+            return $this->jsonResponse($pokemonJson, Response::HTTP_CREATED);
         } catch (PokemonNotFoundException $e) {
             return new JsonResponse($e->getMessage(), Response::HTTP_NOT_FOUND);
         } catch (InvalidRequestException $e) {
@@ -55,7 +57,7 @@ class PokemonController extends Controller
      * @param PokemonService $pokemonService
      * @return Response
      */
-    public function getAllAction(PokemonService $pokemonService): Response
+    public function getAllAction(PokemonService $pokemonService, Serializer $serializer): Response
     {
         $pokemons = $pokemonService->getAll();
 
@@ -63,7 +65,9 @@ class PokemonController extends Controller
             return new JsonResponse(null, Response::HTTP_NOT_FOUND);
         }
 
-        return new JsonResponse($pokemons, Response::HTTP_OK);
+        $pokemonsJson = $serializer->serialize($pokemons, 'json');
+
+        return $this->jsonResponse($pokemonsJson);
     }
 
     /**
@@ -73,11 +77,12 @@ class PokemonController extends Controller
      * @param PokemonService $pokemonService
      * @return Response
      */
-    public function getAction(int $id, PokemonService $pokemonService): Response
+    public function getAction(int $id, PokemonService $pokemonService, Serializer $serializer): Response
     {
         try {
             $pokemon = $pokemonService->getById($id);
-            return new JsonResponse($pokemon, Response::HTTP_OK);
+            $pokemonJson = $serializer->serialize($pokemon, 'json');
+            return $this->jsonResponse($pokemonJson);
         } catch (PokemonNotFoundException $e) {
             return new JsonResponse(null, Response::HTTP_NOT_FOUND);
         }
@@ -145,7 +150,8 @@ class PokemonController extends Controller
 
         try {
             $filename = $pokemonImageService->upload($uploadPokemonImageRequest);
-            return new JsonResponse($filename, Response::HTTP_CREATED);
+            $imageUrl = $request->getUriForPath(sprintf('/uploads/pokemons/%s', $filename));
+            return new JsonResponse($imageUrl, Response::HTTP_CREATED);
         } catch (PokemonNotFoundException $e) {
             return new JsonResponse($e->getMessage(), Response::HTTP_NOT_FOUND);
         } catch (InvalidRequestException $e) {
@@ -171,6 +177,11 @@ class PokemonController extends Controller
         }
     }
 
-
+    private function jsonResponse($content, $code = Response::HTTP_OK): Response
+    {
+        return new Response($content, $code, [
+            'Content-Type' => 'application/json'
+        ]);
+    }
 
 }

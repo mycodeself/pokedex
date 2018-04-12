@@ -3,14 +3,19 @@ import PropTypes from 'prop-types'
 import FormGroup from "./FormGroup"
 import ImageInput from "./ImageInput"
 import PokemonSelect from "./PokemonSelect"
+import {POKEMONS_IMAGE_URL} from "../../constants";
 
 const propTypes = {
-  onSubmit: PropTypes.func
-}
+  onSubmit: PropTypes.func,
+  isEditing: PropTypes.bool,
+  pokemon: PropTypes.object,
+};
 
 const defaultProps = {
-  onSubmit: (pokemon) => {console.log(pokemon)}
-}
+  onSubmit: (pokemon) => {console.log(pokemon)},
+  isEditing: false,
+  pokemon: {}
+};
 
 class PokemonForm extends React.Component {
   constructor(props) {
@@ -18,13 +23,35 @@ class PokemonForm extends React.Component {
 
     this.handleSubmit = this.handleSubmit.bind(this);
 
-    this.state = {
+    this.defaultState = {
+      id: null,
       name: "",
       description: "",
       firstType: "",
       secondType: "",
       evolutionId: null,
       image: null,
+      imageUrl: ""
+    }
+
+    this.state = this.defaultState;
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if(nextProps.isEditing) {
+      const evolutionId = nextProps.pokemon.evolution ? nextProps.pokemon.evolution.id : null;
+      this.setState({
+        id: nextProps.pokemon.id,
+        name: nextProps.pokemon.name,
+        description: nextProps.pokemon.description,
+        firstType: nextProps.pokemon.firstType,
+        secondType: nextProps.pokemon.secondType,
+        evolutionId: evolutionId,
+        image: nextProps.pokemon.image,
+        imageUrl: nextProps.pokemon.imageUrl,
+      })
+    } else {
+      this.setState(this.defaultState);
     }
   }
 
@@ -36,13 +63,17 @@ class PokemonForm extends React.Component {
   render() {
     return (
       <form onSubmit={this.handleSubmit}>
-        <ImageInput onChange={image => this.setState({image})} />
+        <ImageInput
+          onChange={image => this.setState({image})}
+          imageUrl={this.state.imageUrl}
+        />
         <FormGroup
           type="text"
           name="name"
           label="Name"
           placeholder="The pokemon's name..."
           onChange={(value) => this.setState({name: value})}
+          value={this.state.name}
           constraints={{
             notEmpty: true,
             length: {min: 4, max: 24}
@@ -54,6 +85,7 @@ class PokemonForm extends React.Component {
           label="Description"
           placeholder="A powerful description..."
           onChange={(value) => this.setState({description: value})}
+          value={this.state.description}
           constraints={{
             notEmpty: true,
             length: {min: 30}
@@ -65,6 +97,7 @@ class PokemonForm extends React.Component {
           label="Type one"
           placeholder="One pokemon type..."
           onChange={(value) => this.setState({firstType: value})}
+          value={this.state.firstType}
           constraints={{
             length: {min: 4, max: 20}
           }}
@@ -75,6 +108,7 @@ class PokemonForm extends React.Component {
           label="Type two"
           placeholder="Another pokemon type..."
           onChange={(value) => this.setState({secondType: value})}
+          value={this.state.secondType}
           constraints={{
             length: {min: 4, max: 20}
           }}

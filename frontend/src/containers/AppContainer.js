@@ -5,7 +5,7 @@ import {loadPokemons} from "../actions/pokemonActions";
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    pokemons: state.get('pokemon').get('data').toJS()
+    pokemons: state.get('pokemon').get('pokemons').toJS()
   }
 };
 

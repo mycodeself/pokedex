@@ -1,16 +1,17 @@
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: [
     './src/index.js',
-    './assets/scss/index.scss'
+    './assets/scss/index.scss',
   ],
+  devtool: 'inline-source-map',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public/build')
   },
   module: {
-
     rules: [
         {
           test: /\.scss$/,
@@ -38,12 +39,23 @@ module.exports = {
         {
           test: /\.js$/,
           exclude: /node_modules/,
-          use: "babel-loader"
-        }, {
-          test: /\.jsx?$/,
-          exclude: /node_modules/,
-          use: "babel-loader"
+          use: ['babel-loader']
+        },
+        {
+          test: /\.html$/,
+          loader: 'file-loader?name=[name].[ext]',
+        },
+        {
+          test: /\.(eot|svg|ttf|woff|woff2)$/,
+          loader: 'file-loader?name=[name].[ext]'
         }
       ],
-  }
+  },
+  plugins: [
+    new webpack.HotModuleReplacementPlugin()
+  ],
+  devServer: {
+    publicPath: "http://localhost:8080/build/",
+    hot: true
+  },
 };

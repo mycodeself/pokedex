@@ -19,3 +19,6 @@ ReactDOM.render(
   </Provider>,
   root
 );
+
+// enable hot reloading
+module.hot.accept();

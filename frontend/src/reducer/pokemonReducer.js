@@ -1,27 +1,41 @@
 import {fromJS} from "immutable";
+
 import {
   OVERLAY_CLOSE,
   OVERLAY_OPEN,
   POKEMON_CREATED,
   POKEMON_DELETED,
-  POKEMONS_FETCHED
+  POKEMON_IMAGE_UPLOADED,
+  POKEMON_UPDATED,
+  POKEMONS_FETCHED, POKEMONS_SEARCHED
 } from "../actions/pokemonActions";
 
 const initialState = fromJS({
   data: [],
+  pokemons: [],
+  lastSearchText: '',
   overlayIsOpen: false,
   isEditing: false,
-  pokemon: {}
+  pokemon: {},
 });
 
 function pokemonReducer(state = initialState, {type, payload}) {
+  let index = -1;
   switch (type) {
     case POKEMONS_FETCHED:
-      return state.set('data', fromJS(payload));
+      return state.set('data', fromJS(payload)).set('pokemons', fromJS(payload));
     case POKEMON_CREATED:
       return state.update('data', data => data.push(fromJS(payload)));
     case POKEMON_DELETED:
       return state.update('data', data => data.filter((pokemon) => pokemon.get('id') !== payload));
+    case POKEMON_UPDATED:
+      index = state.get('data').findIndex(item => item.get('id') === payload.id);
+      return state.setIn(['data', index], fromJS(payload)).set('pokemon', fromJS(payload));
+    case POKEMON_IMAGE_UPLOADED:
+      index = state.get('data').findIndex(item => item.get('id') === payload.id);
+      return state.setIn(['data', index, 'imageUrl'], payload.imageUrl);
+    case POKEMONS_SEARCHED:
+      return state.set('pokemons', payload.pokemons).set('lastSearchText', payload.text);
     case OVERLAY_OPEN:
       return state
         .set('overlayIsOpen', true)

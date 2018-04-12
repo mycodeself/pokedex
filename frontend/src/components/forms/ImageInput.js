@@ -22,6 +22,12 @@ class ImageInput extends React.Component {
     }
   }
 
+  componentWillReceiveProps(nextProps) {
+    if(this.props.imageUrl !== nextProps.imageUrl) {
+      this.setState({image: null});
+    }
+  }
+
   getFile() {
     return (this.ref) ? this.ref.files[0] : null;
   }
@@ -38,6 +44,7 @@ class ImageInput extends React.Component {
   }
 
   render() {
+
     return (
       <div className="form-group">
         <div className="image-file-input">
@@ -47,7 +54,9 @@ class ImageInput extends React.Component {
           {
             (this.state.image)
               ? <img src={this.state.image} width={150} height={150} />
-              : <img src="../../../assets/images/svg/pokeball.svg" />
+              : (this.props.imageUrl)
+                ? <img src={this.props.imageUrl} width={150} height={150} />
+                : <img src="../../../assets/images/svg/pokeball.svg" />
           }
           <input
             ref={ref => this.ref = ref}
