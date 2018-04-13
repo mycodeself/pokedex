@@ -1,8 +1,12 @@
+import {toastr} from 'react-redux-toastr'
+
 import getPokemonsService from "../services/getPokemonsService";
 import postPokemonsService from "../services/postPokemonService";
 import deletePokemonService from "../services/deletePokemonService";
 import postPokemonImageService from "../services/postPokemonImageService";
 import putPokemonsService from "../services/putPokemonService";
+
+const MAX_FAVORITES = 10;
 
 export const POKEMONS_FETCHED = 'POKEMONS_FETCHED';
 export const POKEMON_CREATED = 'POKEMON_CREATED';
@@ -12,6 +16,7 @@ export const POKEMON_IMAGE_UPLOADED = 'POKEMON_IMAGE_UPLOADED';
 export const POKEMONS_SEARCHED = 'POKEMONS_SEARCHED';
 export const OVERLAY_OPEN = 'OVERLAY_OPEN';
 export const OVERLAY_CLOSE = 'OVERLAY_CLOSE';
+export const POKEMONS_FAVORITES_UPDATED = 'POKEMONS_FAVORITES_UPDATED';
 
 /**
  *
@@ -48,6 +53,12 @@ export function loadPokemons() {
     return getPokemonsService()
       .then(pokemons => {
         dispatch(fetched(pokemons));
+
+        const favorites = localStorage.getItem(btoa('pokedex_favorites'));
+        if(favorites) {
+          dispatch(favoritesUpdated(JSON.parse(atob(favorites))))
+        }
+
         return Promise.resolve(data);
       })
       .catch((error) => {
@@ -62,15 +73,17 @@ export function loadPokemons() {
  * @return {function(*)}
  */
 export function createPokemon(pokemon) {
-  return (dispatch) => {
+  return (dispatch, getState) => {
+    const state = getState();
     return postPokemonsService(pokemon)
       .then(data => {
-
+        dispatch(created(data));
         if(pokemon.image) {
           dispatch(uploadImage(data.id, pokemon.image));
         }
-        dispatch(created(data));
-
+        toastr.success('', 'The pokemon has been created!');
+        dispatch(searchPokemons(state.get('pokemon').get('lastSearchText')));
+        dispatch(closeOverlay());
         return Promise.resolve(pokemon)
       })
       .catch(error => {
@@ -94,6 +107,9 @@ export function updatePokemon(pokemon) {
           dispatch(uploadImage(pokemon.id, pokemon.image));
         }
 
+        dispatch(searchPokemons(state.get('pokemon').get('lastSearchText')));
+        dispatch(closeOverlay());
+        toastr.success('', 'The pokemon has been updated!');
         return Promise.resolve(pokemon)
       })
       .catch(error => {
@@ -152,6 +168,60 @@ export function searchPokemons(text) {
     );
 
     dispatch(searched(text, pokemonsFound));
+  }
+}
+
+/**
+ *
+ * @param pokemonId
+ * @return {function(*, *)}
+ */
+export function addPokemonFavorite(pokemonId) {
+  return (dispatch, getState) => {
+    const favorites = getState().getIn(['pokemon', 'favorites'])
+      .filter(item => getState().getIn(['pokemon', 'data'])
+        .find(pokemon => pokemon.get('id') === item));
+    console.log(favorites.toJS());
+    if(favorites.size >= MAX_FAVORITES) {
+      toastr.error('', 'You can not have more than ten Pokemons as favorites')
+      return;
+    }
+    const favoritesJS = favorites.toJS();
+    favoritesJS.push(pokemonId);
+    localStorage.setItem(btoa('pokedex_favorites'), btoa(JSON.stringify(favoritesJS)));
+    dispatch(favoritesUpdated(favoritesJS));
+  }
+
+}
+
+/**
+ *
+ * @param pokemonId
+ * @return {function(*, *)}
+ */
+export function removePokemonFavorite(pokemonId) {
+  return (dispatch, getState) => {
+    const favorites = getState().getIn(['pokemon', 'favorites']);
+    if(favorites.size === 0) {
+      return;
+    }
+
+    const index = favorites.findIndex(item => item === pokemonId);
+    const favoritesJS = favorites.delete(index).toJS();
+    localStorage.setItem(btoa('pokedex_favorites'), btoa(JSON.stringify(favoritesJS)));
+    dispatch(favoritesUpdated(favoritesJS))
+  }
+}
+
+/**
+ *
+ * @param favorites
+ * @return {{type: string, payload: *}}
+ */
+function favoritesUpdated(favorites) {
+  return {
+    type: POKEMONS_FAVORITES_UPDATED,
+    payload: favorites
   }
 }
 

@@ -6,3 +6,27 @@
   overflow: hidden;
   outline:none;
 }
+
+.button-confirm {
+  border: 2px solid $primary-color;
+  border-radius: 6px;
+  padding: 0.4rem;
+  color: $primary-color;
+  margin: 4px;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    background-color: $primary-color;
+    color: $white;
+  }
+}
+
+.button-cancel {
+  margin: 4px;
+  text-decoration: underline;
+  color: $black--light;
+
+  &:hover {
+    color: #28aafd;
+  }
+}

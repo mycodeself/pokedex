@@ -18,3 +18,43 @@
 .overlay-hide--top {
   transform: translateY(-200%);
 }
+
+.modal-overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(64,64,64,0.8);
+  opacity: 0;
+  color: $white;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  left: 0;
+  transition: all 0.3s ease-in-out;
+  visibility: hidden;
+
+  .modal {
+    background: $white;
+    margin: 10%;
+    border-radius: 20px;
+    padding: 1em;
+    color: $black--light;
+    margin-left: auto;
+    max-width: 300px;
+    margin-right: auto;
+    margin-top: 100px;
+
+    .modal-buttons {
+      text-align: right;
+    }
+
+    p {
+      margin-left: 1rem;
+    }
+  }
+}
+
+.modal-overlay--open {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+}

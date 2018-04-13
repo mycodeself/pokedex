@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?1dplk2');
-  src:  url('../fonts/icomoon.eot?1dplk2#iefix') format('embedded-opentype'),
-  url('../fonts/icomoon.ttf?1dplk2') format('truetype'),
-  url('../fonts/icomoon.woff?1dplk2') format('woff'),
-  url('../fonts/icomoon.svg?1dplk2#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?8bwofp');
+  src:  url('../fonts/icomoon.eot?8bwofp#iefix') format('embedded-opentype'),
+  url('../fonts/icomoon.ttf?8bwofp') format('truetype'),
+  url('../fonts/icomoon.woff?8bwofp') format('woff'),
+  url('../fonts/icomoon.svg?8bwofp#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-cross:before {
+  content: "\e902";
+}
 .icon-close:before {
   content: "\e904";
 }
@@ -34,15 +37,23 @@
   content: "\e901";
 }
 
+// End icomoon
 
-.icon--white {
-  color: white;
-}
+
 
 .icon {
   font-size: 24px;
   opacity: 0.9;
   color: $black--light;
+}
+
+
+.icon--white {
+  color: $white;
+}
+
+.icon--s {
+ font-size: 18px;
 }
 
 .icon--l {

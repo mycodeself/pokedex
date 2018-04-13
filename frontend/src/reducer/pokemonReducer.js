@@ -2,13 +2,15 @@ import {fromJS} from "immutable";
 
 import {
   OVERLAY_CLOSE,
-  OVERLAY_OPEN,
+  OVERLAY_OPEN, POKEMON_ADD_FAVORITE,
   POKEMON_CREATED,
   POKEMON_DELETED,
   POKEMON_IMAGE_UPLOADED,
-  POKEMON_UPDATED,
+  POKEMON_UPDATED, POKEMONS_FAVORITES_UPDATED,
   POKEMONS_FETCHED, POKEMONS_SEARCHED
 } from "../actions/pokemonActions";
+
+
 
 const initialState = fromJS({
   data: [],
@@ -17,6 +19,7 @@ const initialState = fromJS({
   overlayIsOpen: false,
   isEditing: false,
   pokemon: {},
+  favorites: []
 });
 
 function pokemonReducer(state = initialState, {type, payload}) {
@@ -36,6 +39,8 @@ function pokemonReducer(state = initialState, {type, payload}) {
       return state.setIn(['data', index, 'imageUrl'], payload.imageUrl);
     case POKEMONS_SEARCHED:
       return state.set('pokemons', payload.pokemons).set('lastSearchText', payload.text);
+    case POKEMONS_FAVORITES_UPDATED:
+      return state.set('favorites', fromJS(payload));
     case OVERLAY_OPEN:
       return state
         .set('overlayIsOpen', true)
