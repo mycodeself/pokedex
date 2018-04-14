@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 
 import InputValidator from "./InputValidator";
 
-
 const propTypes = {
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
@@ -40,8 +39,6 @@ class FormGroup extends React.Component {
   }
 
   render() {
-    const value = this.props.value ? this.props.value : this.state.value;
-
     return (
       <div className="form-group">
         {
@@ -50,7 +47,7 @@ class FormGroup extends React.Component {
                 placeholder={this.props.placeholder}
                 name={this.props.name}
                 id={this.props.name}
-                value={value}
+                value={this.props.value}
                 onChange={this.handleChange}
               >
               </textarea>
@@ -59,14 +56,14 @@ class FormGroup extends React.Component {
                 name={this.props.name}
                 id={this.props.name}
                 placeholder={this.props.placeholder}
-                value={value}
+                value={this.props.value}
                 onChange={this.handleChange}
               />
         }
         <label htmlFor={this.props.name}>{this.props.label}</label>
         {
           (this.props.constraints)
-            ? <InputValidator constraints={this.props.constraints} value={value}/>
+            ? <InputValidator constraints={this.props.constraints} value={this.props.value}/>
             : null
         }
       </div>

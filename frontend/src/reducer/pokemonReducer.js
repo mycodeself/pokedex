@@ -24,21 +24,22 @@ const initialState = fromJS({
 
 function pokemonReducer(state = initialState, {type, payload}) {
   let index = -1;
+
   switch (type) {
     case POKEMONS_FETCHED:
       return state.set('data', fromJS(payload)).set('pokemons', fromJS(payload));
     case POKEMON_CREATED:
       return state.update('data', data => data.push(fromJS(payload)));
     case POKEMON_DELETED:
-      return state.update('data', data => data.filter((pokemon) => pokemon.get('id') !== payload));
+      return state.set('data', state.get('data').filter(pokemon => pokemon.get('id') !== payload));
     case POKEMON_UPDATED:
       index = state.get('data').findIndex(item => item.get('id') === payload.id);
       return state.setIn(['data', index], fromJS(payload)).set('pokemon', fromJS(payload));
     case POKEMON_IMAGE_UPLOADED:
       index = state.get('data').findIndex(item => item.get('id') === payload.id);
-      return state.setIn(['data', index, 'imageUrl'], payload.imageUrl);
+      return state.setIn(['data', index], state.getIn(['data', index]).set('imageUrl',payload.imageUrl));
     case POKEMONS_SEARCHED:
-      return state.set('pokemons', payload.pokemons).set('lastSearchText', payload.text);
+      return state.set('pokemons', fromJS(payload.pokemons)).set('lastSearchText', payload.text);
     case POKEMONS_FAVORITES_UPDATED:
       return state.set('favorites', fromJS(payload));
     case OVERLAY_OPEN:

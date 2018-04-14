@@ -14,10 +14,13 @@ class PokemonList extends React.Component {
 
   render() {
     return (
-      <div className="pokemon-list">
-        {this.props.pokemons.map(
-          pokemon => <PokemonItem key={pokemon.id} pokemon={pokemon}/>
-        )}
+      <div>
+        <p>{`${this.props.pokemons.length} pokemons.`}</p>
+        <div className="pokemon-list">
+          {this.props.pokemons.map(
+            pokemon => <PokemonItem key={pokemon.id} pokemon={pokemon}/>
+          )}
+        </div>
       </div>
     )
   }

@@ -26,3 +26,5 @@ App\Entity\Pokemon:
   manyToOne:
     evolution:
       targetEntity: App\Entity\Pokemon
+      joinColumn:
+          onDelete:  "SET NULL"

@@ -38,6 +38,8 @@ class PokemonForm extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    console.log(this.defaultState)
+    console.log(nextProps);
     if(nextProps.isEditing) {
       const evolutionId = nextProps.pokemon.evolution ? nextProps.pokemon.evolution.id : null;
       this.setState({
@@ -51,7 +53,16 @@ class PokemonForm extends React.Component {
         imageUrl: nextProps.pokemon.imageUrl,
       })
     } else {
-      this.setState(this.defaultState);
+      this.setState({
+        id: null,
+        name: "",
+        description: "",
+        firstType: "",
+        secondType: "",
+        evolutionId: null,
+        image: null,
+        imageUrl: ""
+      });
     }
   }
 
@@ -61,6 +72,7 @@ class PokemonForm extends React.Component {
   }
 
   render() {
+    console.log(this.state);
     return (
       <form onSubmit={this.handleSubmit}>
         <ImageInput

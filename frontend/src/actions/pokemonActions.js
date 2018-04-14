@@ -87,6 +87,7 @@ export function createPokemon(pokemon) {
         return Promise.resolve(pokemon)
       })
       .catch(error => {
+        toastr.error('', error);
         return Promise.reject(error);
       })
   }
@@ -98,9 +99,10 @@ export function createPokemon(pokemon) {
  * @return {function(*)}
  */
 export function updatePokemon(pokemon) {
-  return (dispatch) => {
+  return (dispatch, getState) => {
     return putPokemonsService(pokemon)
       .then(() => {
+        const state = getState();
         dispatch(updated(pokemon));
 
         if(pokemon.image instanceof File) {
@@ -113,6 +115,7 @@ export function updatePokemon(pokemon) {
         return Promise.resolve(pokemon)
       })
       .catch(error => {
+        toastr.error('', error);
         return Promise.reject(error);
       })
   }
@@ -137,13 +140,18 @@ export function createOrUpdatePokemon(pokemon) {
  * @return {function(*)}
  */
 export function deletePokemon(pokemonId) {
-  return (dispatch) => {
+  return (dispatch, getState) => {
     return deletePokemonService(pokemonId)
       .then(() => {
+        const state = getState();
+        console.log(state.getIn(['pokemon', 'lastSearchText']));
         dispatch(deleted(pokemonId));
+        dispatch(searchPokemons(state.getIn(['pokemon', 'lastSearchText'])));
+        toastr.success('','The pokemon has been removed');
         return Promise.resolve();
       })
       .catch(error => {
+        toastr.error('', error);
         return Promise.reject(error);
       })
   }
@@ -156,10 +164,10 @@ export function deletePokemon(pokemonId) {
  */
 export function searchPokemons(text) {
   return (dispatch, getState) => {
-    const pokemons = getState().get('pokemon').get('data');
+    const pokemons = getState().getIn(['pokemon', 'data']);
 
     if(!text) {
-      dispatch(searched(text, pokemons));
+      dispatch(searched(text, pokemons.toJS()));
       return;
     }
 
@@ -167,7 +175,7 @@ export function searchPokemons(text) {
       item => item.get('name').toLowerCase().includes(text.toLowerCase())
     );
 
-    dispatch(searched(text, pokemonsFound));
+    dispatch(searched(text, pokemonsFound.toJS()));
   }
 }
 
@@ -190,6 +198,7 @@ export function addPokemonFavorite(pokemonId) {
     favoritesJS.push(pokemonId);
     localStorage.setItem(btoa('pokedex_favorites'), btoa(JSON.stringify(favoritesJS)));
     dispatch(favoritesUpdated(favoritesJS));
+    toastr.success('','The pokemon has been added to favorites');
   }
 
 }
@@ -210,6 +219,7 @@ export function removePokemonFavorite(pokemonId) {
     const favoritesJS = favorites.delete(index).toJS();
     localStorage.setItem(btoa('pokedex_favorites'), btoa(JSON.stringify(favoritesJS)));
     dispatch(favoritesUpdated(favoritesJS))
+    toastr.success('', 'The pokemon has been removed from favorites');
   }
 }
 
@@ -311,12 +321,15 @@ function imageUploaded(pokemonId, imageUrl) {
  * @return {function(*)}
  */
 function uploadImage(pokemonId, image) {
-  return (dispatch) => {
+  return (dispatch, getState) => {
     postPokemonImageService(pokemonId, image)
       .then(data => {
+        const state = getState();
         dispatch(imageUploaded(pokemonId, data));
+        dispatch(searchPokemons(state.get('pokemon').get('lastSearchText')));
       })
       .catch(error => {
+        toastr.error('', error);
       })
   }
 }
