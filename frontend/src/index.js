@@ -20,7 +20,7 @@ ReactDOM.render(
     <div>
       <App />
       <ReduxToastr
-        timeOut={3000}
+        timeOut={3500}
         newestOnTop={false}
         preventDuplicates
         position="top-right"

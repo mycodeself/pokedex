@@ -16,7 +16,10 @@ class PokemonSelect extends React.Component {
 
   componentDidMount() {
     getPokemonsService()
-      .then(data => this.setState({options: data}))
+      .then(data => {
+        const pokemons = (this.props.filterId) ? data.filter((item) => item.id !== this.props.filterId) : data;
+        this.setState({options: pokemons})
+      })
       .catch(error => console.log(error))
   }
 

@@ -1,5 +1,5 @@
 .overlay {
-  transition: all 0.5s ease-in-out;
+  transition: all 0.4s ease-in-out;
   position: fixed;
   background-color: rgba(244, 67, 54, 0.9);
   top: 0;
@@ -8,6 +8,12 @@
   height: 100%;
   overflow-y: scroll;
   z-index: 5;
+
+  h1 {
+    text-align: center;
+    color: $white;
+    text-transform: uppercase;
+  }
 
   .close-button {
     text-align: right;

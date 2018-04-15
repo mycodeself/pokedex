@@ -38,31 +38,24 @@ class PokemonForm extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    console.log(this.defaultState)
-    console.log(nextProps);
-    if(nextProps.isEditing) {
-      const evolutionId = nextProps.pokemon.evolution ? nextProps.pokemon.evolution.id : null;
+    this.propsToState(nextProps);
+  }
+
+  propsToState(props) {
+    if(props.isEditing) {
+      const evolutionId = props.pokemon.evolution ? props.pokemon.evolution.id : null;
       this.setState({
-        id: nextProps.pokemon.id,
-        name: nextProps.pokemon.name,
-        description: nextProps.pokemon.description,
-        firstType: nextProps.pokemon.firstType,
-        secondType: nextProps.pokemon.secondType,
+        id: props.pokemon.id,
+        name: props.pokemon.name,
+        description: props.pokemon.description,
+        firstType: props.pokemon.firstType,
+        secondType: props.pokemon.secondType,
         evolutionId: evolutionId,
-        image: nextProps.pokemon.image,
-        imageUrl: nextProps.pokemon.imageUrl,
+        image: props.pokemon.image,
+        imageUrl: props.pokemon.imageUrl,
       })
     } else {
-      this.setState({
-        id: null,
-        name: "",
-        description: "",
-        firstType: "",
-        secondType: "",
-        evolutionId: null,
-        image: null,
-        imageUrl: ""
-      });
+      this.setState(this.defaultState);
     }
   }
 
@@ -72,7 +65,6 @@ class PokemonForm extends React.Component {
   }
 
   render() {
-    console.log(this.state);
     return (
       <form onSubmit={this.handleSubmit}>
         <ImageInput
@@ -128,12 +120,15 @@ class PokemonForm extends React.Component {
         <div className="form-group">
           <PokemonSelect
             name="evolution"
-            placeholder="Pokékom evolve?"
+            placeholder="EVOLUTION"
             onChange={(selectedOption) => this.setState({evolutionId: selectedOption.id})}
             value={this.state.evolutionId}
+            filterId={this.state.id}
           />
         </div>
-        <input type="submit" value="Submit" />
+        <div className="text-center">
+          <input type="submit" value="Save" className="button button-submit"/>
+        </div>
       </form>
     )
   }

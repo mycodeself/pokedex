@@ -87,8 +87,7 @@ export function createPokemon(pokemon) {
         return Promise.resolve(pokemon)
       })
       .catch(error => {
-        toastr.error('', error);
-        return Promise.reject(error);
+        error.then(err => err.forEach(value => toastr.error(value.property, value.message)));
       })
   }
 }
@@ -115,8 +114,7 @@ export function updatePokemon(pokemon) {
         return Promise.resolve(pokemon)
       })
       .catch(error => {
-        toastr.error('', error);
-        return Promise.reject(error);
+        error.then(err => err.forEach(value => toastr.error(value.property, value.message)));
       })
   }
 }

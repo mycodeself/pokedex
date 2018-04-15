@@ -3,6 +3,9 @@ import React from 'react'
 import PokemonList from "./PokemonList";
 import PokemonOverlay from "../containers/PokemonOverlayContainer";
 import NavBar from "../containers/NavBarContainer";
+import SvgIcon from "./icons/SvgIcon";
+import Button from "./buttons/Button";
+import ArrowUpFloatingButton from "./buttons/ArrowUpFloatingButton";
 
 class App extends React.Component {
   constructor(props) {
@@ -32,6 +35,7 @@ class App extends React.Component {
           <PokemonList pokemons={this.props.pokemons}/>
           <PokemonOverlay />
         </main>
+        <ArrowUpFloatingButton/>
       </div>
     )
   }
