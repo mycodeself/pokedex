@@ -32,7 +32,9 @@ class App extends React.Component {
         <NavBar/>
         <main>
           {(this.state.isLoading) ? 'Loading...' : null}
-          <PokemonList pokemons={this.props.pokemons}/>
+          <PokemonList
+            pokemons={this.props.isFavoritesView ? this.props.favorites : this.props.pokemons}
+          />
           <PokemonOverlay />
         </main>
         <ArrowUpFloatingButton/>

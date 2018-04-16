@@ -48,8 +48,9 @@ class PokemonItemOptions extends React.Component {
           <Button
             onClick={this.handleFavClick}
           >
-            <FavouriteIcon
-              isActive={this.state.isFavorite}
+            <SvgIcon
+              name="star"
+              disabled={!this.state.isFavorite}
             />
           </Button>
           <Button onClick={() => this.confirmModalRef.open()}>

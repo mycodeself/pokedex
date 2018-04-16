@@ -5,7 +5,9 @@ import {loadPokemons} from "../actions/pokemonActions";
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    pokemons: state.get('pokemon').get('pokemons').toJS()
+    pokemons: state.get('pokemon').get('pokemons').toJS(),
+    isFavoritesView: state.getIn(['pokemon', 'isFavoritesView']),
+    favorites: state.getIn(['pokemon', 'favorites']).toJS()
   }
 };
 

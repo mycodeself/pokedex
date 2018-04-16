@@ -17,6 +17,8 @@ export const POKEMONS_SEARCHED = 'POKEMONS_SEARCHED';
 export const OVERLAY_OPEN = 'OVERLAY_OPEN';
 export const OVERLAY_CLOSE = 'OVERLAY_CLOSE';
 export const POKEMONS_FAVORITES_UPDATED = 'POKEMONS_FAVORITES_UPDATED';
+export const POKEMONS_FAVORITES_VIEW = 'POKEMONS_FAVORITES_VIEW';
+export const POKEMONS_FAVORITES_VIEW_CLOSE = 'POKEMONS_FAVORITES_VIEW_CLOSE';
 
 /**
  *
@@ -218,6 +220,27 @@ export function removePokemonFavorite(pokemonId) {
     localStorage.setItem(btoa('pokedex_favorites'), btoa(JSON.stringify(favoritesJS)));
     dispatch(favoritesUpdated(favoritesJS))
     toastr.success('', 'The pokemon has been removed from favorites');
+  }
+}
+
+export function viewPokemonFavorites() {
+  return (dispatch, getState) => {
+    const state = getState().get('pokemon');
+    const pokemons = state.get('data').filter(item => state.get('favoritesIds').contains(item.get('id')));
+    dispatch(viewFavorites(pokemons));
+  }
+}
+
+export function closeFavoritesView() {
+  return {
+    type: POKEMONS_FAVORITES_VIEW_CLOSE
+  }
+}
+
+function viewFavorites(pokemons) {
+  return {
+    type: POKEMONS_FAVORITES_VIEW,
+    payload: pokemons
   }
 }
 

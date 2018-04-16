@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from "./buttons/Button";
+import SvgIcon from "./icons/SvgIcon";
 
 class NavBar extends React.Component {
   constructor(props) {
@@ -26,7 +27,41 @@ class NavBar extends React.Component {
     this.props.searchPokemons('');
   }
 
+  renderButtons() {
+    if(this.props.isFavoritesView) {
+      return (
+        <div className="navbar-buttons">
+          <Button onClick={this.props.closeFavoritesView}>
+            <SvgIcon
+              name="back"
+              size={24}
+            />
+          </Button>
+        </div>
+      )
+    }
+
+    return (
+      <div className="navbar-buttons">
+        <Button onClick={this.props.viewPokemonFavorites}>
+          <SvgIcon
+            name="star"
+            size={24}
+          />
+        </Button>
+        <Button onClick={this.onClickSearch}>
+          <em className="icon icon--white icon-search"></em>
+        </Button>
+        <Button onClick={this.props.openOverlay}>
+          <em className="icon icon--white icon-plus"></em>
+        </Button>
+      </div>
+    )
+  }
+
   render() {
+    const title = this.props.isFavoritesView ? 'Favorites' : 'Pokedex';
+
     if(this.state.isSearching) {
       return (
         <nav>
@@ -49,15 +84,8 @@ class NavBar extends React.Component {
 
     return (
       <nav>
-        <h1>Pokedex</h1>
-        <div className="navbar-buttons">
-          <Button onClick={this.onClickSearch}>
-            <em className="icon icon--white icon-search"></em>
-          </Button>
-          <Button onClick={this.props.openOverlay}>
-            <em className="icon icon--white icon-plus"></em>
-          </Button>
-        </div>
+        <h1>{title}</h1>
+        {this.renderButtons()}
       </nav>
     )
   }

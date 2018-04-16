@@ -2,15 +2,18 @@ import {fromJS} from "immutable";
 
 import {
   OVERLAY_CLOSE,
-  OVERLAY_OPEN, POKEMON_ADD_FAVORITE,
+  OVERLAY_OPEN,
+  POKEMON_ADD_FAVORITE,
   POKEMON_CREATED,
   POKEMON_DELETED,
   POKEMON_IMAGE_UPLOADED,
-  POKEMON_UPDATED, POKEMONS_FAVORITES_UPDATED,
-  POKEMONS_FETCHED, POKEMONS_SEARCHED
+  POKEMON_UPDATED,
+  POKEMONS_FAVORITES_UPDATED,
+  POKEMONS_FAVORITES_VIEW,
+  POKEMONS_FAVORITES_VIEW_CLOSE,
+  POKEMONS_FETCHED,
+  POKEMONS_SEARCHED
 } from "../actions/pokemonActions";
-
-
 
 const initialState = fromJS({
   data: [],
@@ -19,6 +22,8 @@ const initialState = fromJS({
   overlayIsOpen: false,
   isEditing: false,
   pokemon: {},
+  favoritesIds: [], // only store favoritesId
+  isFavoritesView: false,
   favorites: []
 });
 
@@ -41,7 +46,11 @@ function pokemonReducer(state = initialState, {type, payload}) {
     case POKEMONS_SEARCHED:
       return state.set('pokemons', fromJS(payload.pokemons)).set('lastSearchText', payload.text);
     case POKEMONS_FAVORITES_UPDATED:
-      return state.set('favorites', fromJS(payload));
+      return state.set('favoritesIds', fromJS(payload));
+    case POKEMONS_FAVORITES_VIEW:
+      return state.set('isFavoritesView', true).set('favorites', payload);
+    case POKEMONS_FAVORITES_VIEW_CLOSE:
+      return state.set('isFavoritesView', false);
     case OVERLAY_OPEN:
       return state
         .set('overlayIsOpen', true)
