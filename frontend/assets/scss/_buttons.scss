@@ -2,9 +2,14 @@
   background-color: Transparent;
   background-repeat: no-repeat;
   border: none;
-  cursor:pointer;
+  cursor: pointer;
   overflow: hidden;
-  outline:none;
+  outline: none;
+
+  &:hover {
+    border: none;
+    background-color: Transparent;
+  }
 }
 
 .button-confirm {
@@ -53,5 +58,4 @@
   position: fixed;
   right: 4%;
   bottom: 2%;
-
 }

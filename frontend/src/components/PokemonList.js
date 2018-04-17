@@ -15,7 +15,9 @@ class PokemonList extends React.Component {
   render() {
     return (
       <div>
-        <p>{`${this.props.pokemons.length} wild Pokémon has appeared.`}</p>
+        <p style={{textAlign: 'center'}}>
+          {`${this.props.pokemons.length} wild Pokémon has appeared.`}
+        </p>
         <div className="pokemon-list">
           {this.props.pokemons.map(
             pokemon => <PokemonItem key={pokemon.id} pokemon={pokemon}/>

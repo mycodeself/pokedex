@@ -32,10 +32,7 @@ class NavBar extends React.Component {
       return (
         <div className="navbar-buttons">
           <Button onClick={this.props.closeFavoritesView}>
-            <SvgIcon
-              name="back"
-              size={24}
-            />
+            <em className="icon icon--white icon-back"></em>
           </Button>
         </div>
       )
@@ -75,7 +72,7 @@ class NavBar extends React.Component {
               onChange={(event) => this.props.searchPokemons(event.target.value)}
             />
             <Button onClick={this.onClickCloseSearch}>
-              <em className="icon icon--white icon--s icon-cross"></em>
+              <em className="icon icon--white icon--s icon-cross-out"></em>
             </Button>
           </div>
         </nav>

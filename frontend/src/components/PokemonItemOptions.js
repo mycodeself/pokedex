@@ -1,5 +1,4 @@
 import React from 'react'
-import FavouriteIcon from "./icons/FavouriteIcon";
 import Button from "./buttons/Button";
 import SvgIcon from "./icons/SvgIcon";
 import ConfirmationModal from "./ConfirmationModal";
@@ -17,12 +16,15 @@ class PokemonItemOptions extends React.Component {
   }
 
   componentWillMount() {
-    const isFavorite = this.props.favorites.includes(this.props.pokemon.id);
-    this.setState({isFavorite: isFavorite})
+    this.checkIfFavorite(this.props.favoritesIds, this.props.pokemon.id)
   }
 
   componentWillReceiveProps(nextProps) {
-    const isFavorite = nextProps.favorites.includes(nextProps.pokemon.id);
+    this.checkIfFavorite(nextProps.favoritesIds, nextProps.pokemon.id)
+  }
+
+  checkIfFavorite(favoritesIds, pokemonId) {
+    const isFavorite = favoritesIds.includes(pokemonId);
     this.setState({isFavorite: isFavorite})
   }
 

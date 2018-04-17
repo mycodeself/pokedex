@@ -12,7 +12,10 @@ const PokemonItem = ({pokemon}) => {
         </div>
         <PokemonItemOptions pokemon={pokemon}/>
         <h1>{pokemon.name}</h1>
-        <p>{pokemon.firstType} {pokemon.secondType}</p>
+        <p className="pokemon-types">
+          {(pokemon.firstType) ? <span className="pokemon-type-one">{pokemon.firstType}</span> : null}
+          {(pokemon.secondType) ? <span className="pokemon-type-two">{pokemon.secondType}</span> : null}
+        </p>
       </div>
     </div>
   )

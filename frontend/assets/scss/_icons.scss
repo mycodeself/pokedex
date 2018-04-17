@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?8bwofp');
-  src:  url('../fonts/icomoon.eot?8bwofp#iefix') format('embedded-opentype'),
-  url('../fonts/icomoon.ttf?8bwofp') format('truetype'),
-  url('../fonts/icomoon.woff?8bwofp') format('woff'),
-  url('../fonts/icomoon.svg?8bwofp#icomoon') format('svg');
+  src:  url('../fonts/icomoon.eot?s8lu9c');
+  src:  url('../fonts/icomoon.eot?s8lu9c#iefix') format('embedded-opentype'),
+  url('../fonts/icomoon.ttf?s8lu9c') format('truetype'),
+  url('../fonts/icomoon.woff?s8lu9c') format('woff'),
+  url('../fonts/icomoon.svg?s8lu9c#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,8 +24,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-cross:before {
+.icon-cross-out:before {
+  content: "\e901";
+}
+.icon-search:before {
   content: "\e902";
+}
+.icon-back:before {
+  content: "\e903";
 }
 .icon-close:before {
   content: "\e904";
@@ -33,10 +39,6 @@
 .icon-plus:before {
   content: "\e900";
 }
-.icon-search:before {
-  content: "\e901";
-}
-
 // End icomoon
 
 

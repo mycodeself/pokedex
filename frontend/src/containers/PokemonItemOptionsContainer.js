@@ -5,7 +5,7 @@ import {addPokemonFavorite, deletePokemon, openOverlay, removePokemonFavorite} f
 
 const mapStateToProps = (state, ownProps) => {
   return {
-    favorites: state.getIn(['pokemon', 'favorites']).toJS(),
+    favoritesIds: state.getIn(['pokemon', 'favoritesIds']).toJS(),
   }
 };
 

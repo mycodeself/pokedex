@@ -3,19 +3,25 @@
   <component name="ChangeListManager">
     <list default="true" id="a85d3ec3-ea6b-4f1c-b208-3d81f9825f4e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/frontend/assets/images/svg/005-nintendo-1.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/frontend/assets/images/svg/009-star.svg" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/frontend/assets/fonts/icomoon.eot" afterPath="$PROJECT_DIR$/frontend/assets/fonts/icomoon.eot" />
+      <change beforePath="$PROJECT_DIR$/frontend/assets/fonts/icomoon.svg" afterPath="$PROJECT_DIR$/frontend/assets/fonts/icomoon.svg" />
+      <change beforePath="$PROJECT_DIR$/frontend/assets/fonts/icomoon.ttf" afterPath="$PROJECT_DIR$/frontend/assets/fonts/icomoon.ttf" />
+      <change beforePath="$PROJECT_DIR$/frontend/assets/fonts/icomoon.woff" afterPath="$PROJECT_DIR$/frontend/assets/fonts/icomoon.woff" />
+      <change beforePath="$PROJECT_DIR$/frontend/assets/images/icons/003-search.svg" afterPath="$PROJECT_DIR$/frontend/assets/images/icons/003-search.svg" />
+      <change beforePath="$PROJECT_DIR$/frontend/assets/images/icons/cross-out.svg" afterPath="$PROJECT_DIR$/frontend/assets/images/icons/cross-out.svg" />
+      <change beforePath="$PROJECT_DIR$/frontend/assets/images/icons/icomoon.zip" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/frontend/assets/images/svg/back.svg" afterPath="" />
       <change beforePath="$PROJECT_DIR$/frontend/assets/scss/_base.scss" afterPath="$PROJECT_DIR$/frontend/assets/scss/_base.scss" />
       <change beforePath="$PROJECT_DIR$/frontend/assets/scss/_buttons.scss" afterPath="$PROJECT_DIR$/frontend/assets/scss/_buttons.scss" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/actions/pokemonActions.js" afterPath="$PROJECT_DIR$/frontend/src/actions/pokemonActions.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/App.js" afterPath="$PROJECT_DIR$/frontend/src/components/App.js" />
+      <change beforePath="$PROJECT_DIR$/frontend/assets/scss/_forms.scss" afterPath="$PROJECT_DIR$/frontend/assets/scss/_forms.scss" />
+      <change beforePath="$PROJECT_DIR$/frontend/assets/scss/_icons.scss" afterPath="$PROJECT_DIR$/frontend/assets/scss/_icons.scss" />
+      <change beforePath="$PROJECT_DIR$/frontend/assets/scss/_lists.scss" afterPath="$PROJECT_DIR$/frontend/assets/scss/_lists.scss" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/NavBar.js" afterPath="$PROJECT_DIR$/frontend/src/components/NavBar.js" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/PokemonItem.js" afterPath="$PROJECT_DIR$/frontend/src/components/PokemonItem.js" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/PokemonItemOptions.js" afterPath="$PROJECT_DIR$/frontend/src/components/PokemonItemOptions.js" />
       <change beforePath="$PROJECT_DIR$/frontend/src/components/PokemonList.js" afterPath="$PROJECT_DIR$/frontend/src/components/PokemonList.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/icons/SvgIcon.js" afterPath="$PROJECT_DIR$/frontend/src/components/icons/SvgIcon.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/containers/AppContainer.js" afterPath="$PROJECT_DIR$/frontend/src/containers/AppContainer.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/containers/NavBarContainer.js" afterPath="$PROJECT_DIR$/frontend/src/containers/NavBarContainer.js" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/reducer/pokemonReducer.js" afterPath="$PROJECT_DIR$/frontend/src/reducer/pokemonReducer.js" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/icons/FavouriteIcon.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/containers/PokemonItemOptionsContainer.js" afterPath="$PROJECT_DIR$/frontend/src/containers/PokemonItemOptionsContainer.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -29,95 +35,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PokemonForm.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/forms/PokemonForm.js">
+      <file leaf-file-name="PokemonList.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/PokemonList.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="709">
-              <caret line="125" column="20" lean-forward="false" selection-start-line="125" selection-start-column="12" selection-end-line="125" selection-end-column="20" />
+            <state relative-caret-position="196">
+              <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pokemonActions.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/actions/pokemonActions.js">
+      <file leaf-file-name="PokemonItem.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/PokemonItem.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-14">
-              <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-              <folding>
-                <element signature="e#2070#2644#0" expanded="true" />
-                <element signature="e#2162#2512#0" expanded="true" />
-                <element signature="e#2536#2639#0" expanded="true" />
-                <element signature="e#2776#3375#0" expanded="true" />
-                <element signature="e#3267#3370#0" expanded="true" />
-                <element signature="n#!!block;n#viewPokemonFavorites#0" expanded="true" />
-                <element signature="e#6130#6326#0" expanded="true" />
-                <element signature="n#!!block;n#closeFavoritesView#0" expanded="true" />
-                <element signature="n#!!block;n#viewFavorites#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pokemonReducer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/reducer/pokemonReducer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="52" column="49" lean-forward="false" selection-start-line="52" selection-start-column="49" selection-end-line="52" selection-end-column="49" />
+            <state relative-caret-position="140">
+              <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/App.js">
+      <file leaf-file-name="PokemonItemOptionsContainer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/containers/PokemonItemOptionsContainer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="36" column="10" lean-forward="false" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+            <state relative-caret-position="56">
+              <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppContainer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/containers/AppContainer.js">
+      <file leaf-file-name="_lists.scss" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/assets/scss/_lists.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="84">
-              <caret line="9" column="59" lean-forward="false" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NavBar.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/NavBar.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="35" column="24" lean-forward="false" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
-              <folding>
-                <element signature="n#!!block;n#render#0;n#NavBar#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NavBarContainer.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/containers/NavBarContainer.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="16" column="50" lean-forward="false" selection-start-line="16" selection-start-column="50" selection-end-line="16" selection-end-column="50" />
-              <folding>
-                <element signature="e#241#325#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PokemonItemOptions.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/components/PokemonItemOptions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="51" column="25" lean-forward="false" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
+            <state relative-caret-position="238">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -127,22 +79,33 @@
         <entry file="file://$PROJECT_DIR$/frontend/src/components/icons/SvgIcon.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="25" lean-forward="true" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+              <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PokemonItemOptions.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/frontend/src/components/PokemonItemOptions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="182">
+              <caret line="22" column="27" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
               <folding>
-                <element signature="e#84#312#0" expanded="true" />
+                <element signature="e#0#25#0" expanded="true" />
+                <element signature="n#!!block;n#componentWillMount#0;n#PokemonItemOptions#0" expanded="true" />
+                <element signature="n#!!block;n#checkIfFavorite#0;n#PokemonItemOptions#0" expanded="true" />
+                <element signature="n#!!block;n#render#0;n#PokemonItemOptions#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="postPokemonService.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontend/src/services/postPokemonService.js">
+      <file leaf-file-name="_forms.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/frontend/assets/scss/_forms.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="28">
-              <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-              <folding>
-                <element signature="e#97#688#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="737">
+              <caret line="136" column="35" lean-forward="false" selection-start-line="136" selection-start-column="35" selection-end-line="136" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -167,9 +130,14 @@
       <find>console.log</find>
       <find>console</find>
       <find>form-er</find>
+      <find>fonts/</find>
+      <find>Favour</find>
+      <find>.pokemon-item</find>
+      <find>search-</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
+      <replace>../fonts/</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -178,7 +146,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/frontend/src/components/icons/Icon.js" />
         <option value="$PROJECT_DIR$/frontend/src/services/postPokemonImageService.js" />
         <option value="$PROJECT_DIR$/frontend/src/constants/index.js" />
         <option value="$PROJECT_DIR$/backend/src/Service/Request/CreatePokemonRequest.php" />
@@ -193,16 +160,13 @@
         <option value="$PROJECT_DIR$/backend/config/services.yaml" />
         <option value="$PROJECT_DIR$/backend/src/Serializer/Normalizer/PokemonNormalizer.php" />
         <option value="$PROJECT_DIR$/backend/src/Controller/PokemonController.php" />
-        <option value="$PROJECT_DIR$/frontend/src/components/PokemonItem.js" />
         <option value="$PROJECT_DIR$/backend/src/Service/PokemonImageService.php" />
         <option value="$PROJECT_DIR$/backend/src/Service/PokemonService.php" />
         <option value="$PROJECT_DIR$/frontend/src/components/forms/ImageInput.js" />
         <option value="$PROJECT_DIR$/frontend/assets/scss/utils/_variables.scss" />
         <option value="$PROJECT_DIR$/frontend/assets/scss/utils/_mixins.scss" />
-        <option value="$PROJECT_DIR$/frontend/assets/scss/_icons.scss" />
         <option value="$PROJECT_DIR$/frontend/assets/scss/_navbar.scss" />
         <option value="$PROJECT_DIR$/frontend/src/components/ConfirmationModal.js" />
-        <option value="$PROJECT_DIR$/frontend/src/containers/PokemonItemOptionsContainer.js" />
         <option value="$PROJECT_DIR$/frontend/assets/scss/index.scss" />
         <option value="$PROJECT_DIR$/frontend/src/reducer/index.js" />
         <option value="$PROJECT_DIR$/backend/src/Doctrine/ORM/Pokemon.orm.yml" />
@@ -217,18 +181,22 @@
         <option value="$PROJECT_DIR$/frontend/src/index.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/buttons/ArrowUpButton.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/buttons/ArrowUpFloatingButton.js" />
-        <option value="$PROJECT_DIR$/frontend/assets/scss/_forms.scss" />
         <option value="$PROJECT_DIR$/frontend/src/components/icons/SvgIcon.js" />
-        <option value="$PROJECT_DIR$/frontend/src/components/PokemonItemOptions.js" />
-        <option value="$PROJECT_DIR$/frontend/assets/scss/_base.scss" />
-        <option value="$PROJECT_DIR$/frontend/src/components/PokemonList.js" />
-        <option value="$PROJECT_DIR$/frontend/assets/scss/_buttons.scss" />
         <option value="$PROJECT_DIR$/frontend/src/containers/AppContainer.js" />
         <option value="$PROJECT_DIR$/frontend/src/components/App.js" />
         <option value="$PROJECT_DIR$/frontend/src/actions/pokemonActions.js" />
         <option value="$PROJECT_DIR$/frontend/src/containers/NavBarContainer.js" />
         <option value="$PROJECT_DIR$/frontend/src/reducer/pokemonReducer.js" />
+        <option value="$PROJECT_DIR$/frontend/assets/scss/_icons.scss" />
         <option value="$PROJECT_DIR$/frontend/src/components/NavBar.js" />
+        <option value="$PROJECT_DIR$/frontend/assets/scss/_buttons.scss" />
+        <option value="$PROJECT_DIR$/frontend/assets/scss/_base.scss" />
+        <option value="$PROJECT_DIR$/frontend/src/components/PokemonItem.js" />
+        <option value="$PROJECT_DIR$/frontend/src/components/PokemonList.js" />
+        <option value="$PROJECT_DIR$/frontend/assets/scss/_lists.scss" />
+        <option value="$PROJECT_DIR$/frontend/src/containers/PokemonItemOptionsContainer.js" />
+        <option value="$PROJECT_DIR$/frontend/src/components/PokemonItemOptions.js" />
+        <option value="$PROJECT_DIR$/frontend/assets/scss/_forms.scss" />
       </list>
     </option>
   </component>
@@ -364,7 +332,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -424,7 +392,7 @@
               <item name="frontend" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="components" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="forms" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="icons" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="pokedex" type="b2602c69:ProjectViewProjectNode" />
@@ -444,7 +412,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -522,26 +490,28 @@
       <workItem from="1523811910601" duration="2455000" />
       <workItem from="1523820012603" duration="1944000" />
       <workItem from="1523901783572" duration="3764000" />
+      <workItem from="1523990813354" duration="2799000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122894000" />
+    <option name="totallyTimeSpent" value="125693000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="27" width="1922" height="1054" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22257721" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Atlassian " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22470714" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Atlassian " active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -549,7 +519,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296582" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -608,13 +577,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/backend/src/Service/Request/UploadPokemonImageRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="15" selection-end-line="9" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/Service/Request/UpdatePokemonRequest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="406">
@@ -708,31 +670,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/assets/scss/utils/_variables.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/assets/scss/utils/_mixins.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/assets/scss/_icons.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="55" column="14" lean-forward="false" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/PokemonItem.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="12" column="23" lean-forward="false" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
         </state>
       </provider>
     </entry>
@@ -760,13 +701,6 @@
     <entry file="file://$PROJECT_DIR$/doc/pokedex_inspiration.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/containers/PokemonItemOptionsContainer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="23" column="15" lean-forward="false" selection-start-line="23" selection-start-column="15" selection-end-line="23" selection-end-column="15" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/backend/src/Doctrine/ORM/Pokemon.orm.yml">
@@ -858,79 +792,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/assets/scss/_forms.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="113" column="19" lean-forward="false" selection-start-line="113" selection-start-column="12" selection-end-line="113" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/services/postPokemonService.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="28">
           <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
           <folding>
-            <element signature="e#97#688#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/PokemonItemOptions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="51" column="25" lean-forward="false" selection-start-line="51" selection-start-column="25" selection-end-line="51" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/assets/scss/_base.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="19" column="20" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/PokemonList.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="17" column="49" lean-forward="false" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/icons/SvgIcon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="25" lean-forward="true" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
-          <folding>
-            <element signature="e#84#312#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/assets/scss/_buttons.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="57" column="0" lean-forward="true" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/icons/FavouriteIcon.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="28">
-          <caret line="2" column="15" lean-forward="true" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-          <folding>
-            <element signature="e#84#289#0" expanded="false" />
+            <element signature="e#97#688#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/forms/PokemonForm.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="709">
+        <state relative-caret-position="0">
           <caret line="125" column="20" lean-forward="false" selection-start-line="125" selection-start-column="12" selection-end-line="125" selection-end-column="20" />
           <folding />
         </state>
@@ -948,7 +822,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/actions/pokemonActions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-14">
+        <state relative-caret-position="196">
           <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding>
             <element signature="e#2070#2644#0" expanded="true" />
@@ -964,19 +838,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/reducer/pokemonReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="52" column="49" lean-forward="false" selection-start-line="52" selection-start-column="49" selection-end-line="52" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontend/src/components/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="36" column="10" lean-forward="false" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/assets/scss/_icons.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="40" column="1" lean-forward="false" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/NavBar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="74" column="68" lean-forward="false" selection-start-line="74" selection-start-column="68" selection-end-line="74" selection-end-column="68" />
+          <folding>
+            <element signature="n#!!block;n#renderButtons#0;n#NavBar#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -988,13 +872,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/frontend/src/components/NavBar.js">
+    <entry file="file://$PROJECT_DIR$/frontend/assets/scss/_base.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="35" column="24" lean-forward="false" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+        <state relative-caret-position="252">
+          <caret line="18" column="20" lean-forward="false" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/assets/scss/_buttons.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="65">
+          <caret line="10" column="34" lean-forward="false" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/assets/scss/utils/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="6" column="1" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/icons/FavouriteIcon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/PokemonList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="19" column="8" lean-forward="false" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/reducer/pokemonReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="24" column="14" lean-forward="false" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="14" />
           <folding>
-            <element signature="n#!!block;n#render#0;n#NavBar#0" expanded="true" />
+            <element signature="n#!!block;n#pokemonReducer#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/PokemonItem.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/containers/PokemonItemOptionsContainer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="7" column="16" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/assets/scss/_lists.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/icons/SvgIcon.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="25" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="0" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/src/components/PokemonItemOptions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="22" column="27" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+            <element signature="n#!!block;n#componentWillMount#0;n#PokemonItemOptions#0" expanded="true" />
+            <element signature="n#!!block;n#checkIfFavorite#0;n#PokemonItemOptions#0" expanded="true" />
+            <element signature="n#!!block;n#render#0;n#PokemonItemOptions#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/frontend/assets/scss/_forms.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="737">
+          <caret line="136" column="35" lean-forward="false" selection-start-line="136" selection-start-column="35" selection-end-line="136" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
