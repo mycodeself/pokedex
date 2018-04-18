@@ -5,9 +5,8 @@ namespace App\Exception;
 use Exception;
 
 /**
- * Class PokemonNotFoundException
+ * Class PokemonNotFoundException.
  */
 class PokemonNotFoundException extends Exception
 {
-
 }

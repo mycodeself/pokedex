@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: user
  * Date: 30/03/18
- * Time: 18:38
+ * Time: 18:38.
  */
 
 namespace App\Exception;
@@ -49,11 +49,10 @@ class InvalidRequestException extends Exception
                 'parameters' => $violation->getParameters(),
                 'invalidValue' => $violation->getInvalidValue(),
                 'messageTemplate' => $violation->getMessageTemplate(),
-                'plural' => $violation->getPlural()
+                'plural' => $violation->getPlural(),
             ];
         }
 
         return $violations;
     }
-
 }

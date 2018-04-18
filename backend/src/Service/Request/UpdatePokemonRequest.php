@@ -3,7 +3,7 @@
 namespace App\Service\Request;
 
 /**
- * Class UpdatePokemonRequest
+ * Class UpdatePokemonRequest.
  */
 class UpdatePokemonRequest extends CreatePokemonRequest
 {
@@ -14,6 +14,7 @@ class UpdatePokemonRequest extends CreatePokemonRequest
 
     /**
      * UpdatePokemonRequest constructor.
+     *
      * @param int $id
      */
     public function __construct(
@@ -23,8 +24,7 @@ class UpdatePokemonRequest extends CreatePokemonRequest
         string $firstType,
         string $secondType,
         ?int $evolutionId = null
-    )
-    {
+    ) {
         $this->id = $id;
         parent::__construct(
             $name,
@@ -57,5 +57,4 @@ class UpdatePokemonRequest extends CreatePokemonRequest
             isset($data['evolutionId']) ? (int) $data['evolutionId'] : 0
         );
     }
-
 }

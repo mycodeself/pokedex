@@ -18,7 +18,8 @@ class UploadPokemonImageRequest implements RequestInterface
 
     /**
      * UploadPokemonImageRequest constructor.
-     * @param int $id
+     *
+     * @param int          $id
      * @param UploadedFile $image
      */
     public function __construct(int $id, UploadedFile $image)

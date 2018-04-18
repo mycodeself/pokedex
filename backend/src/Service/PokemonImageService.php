@@ -3,11 +3,10 @@
  * Created by PhpStorm.
  * User: user
  * Date: 31/03/18
- * Time: 17:23
+ * Time: 17:23.
  */
 
 namespace App\Service;
-
 
 use App\Entity\Pokemon;
 use App\Exception\InvalidRequestException;
@@ -30,8 +29,9 @@ class PokemonImageService
 
     /**
      * PokemonImageService constructor.
+     *
      * @param PokemonRepositoryInterface $pokemonRepository
-     * @param RequestValidator $validator
+     * @param RequestValidator           $validator
      */
     public function __construct(PokemonRepositoryInterface $pokemonRepository, RequestValidator $validator)
     {
@@ -41,7 +41,9 @@ class PokemonImageService
 
     /**
      * @param UploadPokemonImageRequest $request
+     *
      * @return string
+     *
      * @throws PokemonNotFoundException
      * @throws InvalidRequestException
      */
@@ -54,7 +56,7 @@ class PokemonImageService
         $this->deleteImage($pokemon->image());
 
         $file = $request->image();
-        $fileName = $pokemon->name() . uniqid() . '.' . $file->guessExtension();
+        $fileName = $pokemon->name().uniqid().'.'.$file->guessExtension();
 
         $file->move(Pokemon::IMAGE_UPLOAD_PATH, $fileName);
         $pokemon->updateImage($fileName);
@@ -65,6 +67,7 @@ class PokemonImageService
 
     /**
      * @param int $pokemonId
+     *
      * @throws PokemonNotFoundException
      */
     public function delete(int $pokemonId): void
@@ -79,9 +82,9 @@ class PokemonImageService
      */
     public function deleteImage(string $fileName): void
     {
-        if(!empty($fileName)) {
-            $filePath = Pokemon::IMAGE_UPLOAD_PATH . '/' . $fileName;
-            if(is_file($filePath)) {
+        if (!empty($fileName)) {
+            $filePath = Pokemon::IMAGE_UPLOAD_PATH.'/'.$fileName;
+            if (is_file($filePath)) {
                 unlink($filePath);
             }
         }

@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Serializer\Normalizer;
+
 use App\Entity\Pokemon;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\Serializer\Exception\CircularReferenceException;
@@ -9,11 +10,10 @@ use Symfony\Component\Serializer\Exception\LogicException;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
 
 /**
- * Class PokemonNormalizer
+ * Class PokemonNormalizer.
  */
 class PokemonNormalizer implements NormalizerInterface
 {
-
     /**
      * @var RequestStack
      */
@@ -21,6 +21,7 @@ class PokemonNormalizer implements NormalizerInterface
 
     /**
      * PokemonNormalizer constructor.
+     *
      * @param RequestStack $requestStack
      */
     public function __construct(RequestStack $requestStack)
@@ -31,9 +32,9 @@ class PokemonNormalizer implements NormalizerInterface
     /**
      * Normalizes an object into a set of arrays/scalars.
      *
-     * @param Pokemon $object Object to normalize
-     * @param string $format Format the normalization result will be encoded as
-     * @param array $context Context options for the normalizer
+     * @param Pokemon $object  Object to normalize
+     * @param string  $format  Format the normalization result will be encoded as
+     * @param array   $context Context options for the normalizer
      *
      * @return array|string|int|float|bool
      *
@@ -42,7 +43,7 @@ class PokemonNormalizer implements NormalizerInterface
      *                                    reference handler can fix it
      * @throws LogicException             Occurs when the normalizer is not called in an expected context
      */
-    public function normalize($object, $format = null, array $context = array())
+    public function normalize($object, $format = null, array $context = [])
     {
         $request = $this->requestStack->getCurrentRequest();
 
@@ -50,7 +51,7 @@ class PokemonNormalizer implements NormalizerInterface
             ? $request->getUriForPath(sprintf('/uploads/pokemons/%s', $object->image()))
             : '';
 
-        $evolution = $object->evolution() ? $this->normalize($object->evolution(),  'json') : null;
+        $evolution = $object->evolution() ? $this->normalize($object->evolution(), 'json') : null;
 
         return [
             'id' => $object->id(),
@@ -60,14 +61,14 @@ class PokemonNormalizer implements NormalizerInterface
             'secondType' => $object->types()->secondaryType(),
             'evolution' => $evolution,
             'image' => $object->image(),
-            'imageUrl' => $imageUrl
+            'imageUrl' => $imageUrl,
         ];
     }
 
     /**
      * Checks whether the given class is supported for normalization by this normalizer.
      *
-     * @param mixed $data Data to normalize
+     * @param mixed  $data   Data to normalize
      * @param string $format The format being (de-)serialized from or into
      *
      * @return bool

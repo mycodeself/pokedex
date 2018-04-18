@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Doctrine\Repository;
+
 use App\Entity\Pokemon;
 use App\Exception\PokemonNotFoundException;
 use App\Repository\PokemonRepositoryInterface;
@@ -8,13 +9,13 @@ use Doctrine\ORM\EntityRepository;
 use Doctrine\ORM\ORMException;
 
 /**
- * Class PokemonRepository
+ * Class PokemonRepository.
  */
 class PokemonRepository extends EntityRepository implements PokemonRepositoryInterface
 {
-
     /**
      * @param int $id
+     *
      * @return Pokemon
      *
      * @throws PokemonNotFoundException
@@ -23,7 +24,7 @@ class PokemonRepository extends EntityRepository implements PokemonRepositoryInt
     {
         $pokemon = $this->findById($id);
 
-        if(empty($pokemon)) {
+        if (empty($pokemon)) {
             throw new PokemonNotFoundException(sprintf('Pokemon with id %d was not found.', $id));
         }
 
@@ -32,6 +33,7 @@ class PokemonRepository extends EntityRepository implements PokemonRepositoryInt
 
     /**
      * @param int $id
+     *
      * @return Pokemon|null
      */
     public function findById(int $id): ?Pokemon
@@ -49,6 +51,7 @@ class PokemonRepository extends EntityRepository implements PokemonRepositoryInt
 
     /**
      * @param Pokemon $pokemon
+     *
      * @throws ORMException
      */
     public function save(Pokemon $pokemon): void
@@ -61,6 +64,7 @@ class PokemonRepository extends EntityRepository implements PokemonRepositoryInt
 
     /**
      * @param Pokemon $pokemon
+     *
      * @throws ORMException
      */
     public function remove(Pokemon $pokemon): void
@@ -73,12 +77,13 @@ class PokemonRepository extends EntityRepository implements PokemonRepositoryInt
 
     /**
      * @param string $name
+     *
      * @return Pokemon|null|object
      */
     public function findByName(string $name): ?Pokemon
     {
         return $this->findOneBy([
-            'name' => $name
+            'name' => $name,
         ]);
     }
 }

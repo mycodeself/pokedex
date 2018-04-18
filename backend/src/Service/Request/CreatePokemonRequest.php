@@ -3,10 +3,12 @@
 namespace App\Service\Request;
 
 use Symfony\Component\Validator\Constraints as Assert;
-
+use App\Validator\Constraints as AppAssert;
 
 /**
- * Class CreatePokemonRequest
+ * Class CreatePokemonRequest.
+ *
+ * @AppAssert\PokemonTypes
  */
 class CreatePokemonRequest implements RequestInterface
 {
@@ -41,11 +43,12 @@ class CreatePokemonRequest implements RequestInterface
 
     /**
      * CreatePokemonRequest constructor.
+     *
      * @param string $name
      * @param string $description
      * @param string $firstType
      * @param string $secondType
-     * @param int $evolutionId
+     * @param int    $evolutionId
      */
     public function __construct(
         string $name,
@@ -53,8 +56,7 @@ class CreatePokemonRequest implements RequestInterface
         string $firstType,
         string $secondType = '',
         ?int $evolutionId = null
-    )
-    {
+    ) {
         $this->name = $name;
         $this->description = $description;
         $this->firstType = $firstType;
@@ -104,6 +106,7 @@ class CreatePokemonRequest implements RequestInterface
 
     /**
      * @param array $data
+     *
      * @return static
      */
     public static function fromArray(array $data)
@@ -116,5 +119,4 @@ class CreatePokemonRequest implements RequestInterface
             isset($data['evolutionId']) ? $data['evolutionId'] : null
         );
     }
-
 }

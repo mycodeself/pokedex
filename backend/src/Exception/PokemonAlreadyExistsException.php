@@ -3,7 +3,7 @@
  * Created by PhpStorm.
  * User: user
  * Date: 30/03/18
- * Time: 18:40
+ * Time: 18:40.
  */
 
 namespace App\Exception;

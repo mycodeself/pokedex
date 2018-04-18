@@ -1,15 +1,13 @@
 <?php
 
 namespace App\Entity;
-use App\Service\Request\CreatePokemonRequest;
-use JsonSerializable;
 
 /**
- * Class Pokemon
+ * Class Pokemon.
  */
 class Pokemon
 {
-    const IMAGE_UPLOAD_PATH = __DIR__ . '/../../public/uploads/pokemons';
+    const IMAGE_UPLOAD_PATH = __DIR__.'/../../public/uploads/pokemons';
 
     /**
      * @var int
@@ -43,8 +41,9 @@ class Pokemon
 
     /**
      * Pokemon constructor.
-     * @param string $name
-     * @param string $description
+     *
+     * @param string       $name
+     * @param string       $description
      * @param PokemonTypes $type
      * @param Pokemon|null $evolution
      */
@@ -144,5 +143,4 @@ class Pokemon
     {
         $this->image = $image;
     }
-
 }

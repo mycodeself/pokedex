@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Service;
+
 use App\Entity\Pokemon;
 use App\Entity\PokemonTypes;
 use App\Exception\InvalidRequestException;
@@ -8,14 +9,11 @@ use App\Exception\PokemonAlreadyExistsException;
 use App\Exception\PokemonNotFoundException;
 use App\Repository\PokemonRepositoryInterface;
 use App\Service\Request\CreatePokemonRequest;
-use App\Service\Request\RequestInterface;
 use App\Service\Request\UpdatePokemonRequest;
-use App\Service\Request\UploadPokemonImageRequest;
 use App\Validator\RequestValidator;
-use Symfony\Component\Validator\Validator\ValidatorInterface;
 
 /**
- * Class PokemonService
+ * Class PokemonService.
  */
 class PokemonService
 {
@@ -36,15 +34,15 @@ class PokemonService
 
     /**
      * PokemonService constructor.
+     *
      * @param PokemonRepositoryInterface $pokemonRepository
-     * @param RequestValidator $validatorInterface
+     * @param RequestValidator           $validatorInterface
      */
     public function __construct(
         PokemonRepositoryInterface $pokemonRepository,
         RequestValidator $validator,
         PokemonImageService $pokemonImageService
-    )
-    {
+    ) {
         $this->pokemonRepository = $pokemonRepository;
         $this->validator = $validator;
         $this->pokemonImageService = $pokemonImageService;
@@ -52,7 +50,9 @@ class PokemonService
 
     /**
      * @param CreatePokemonRequest $request
+     *
      * @return Pokemon
+     *
      * @throws PokemonNotFoundException
      * @throws InvalidRequestException
      * @throws PokemonAlreadyExistsException
@@ -61,14 +61,14 @@ class PokemonService
     {
         $this->validator->validate($request);
 
-        if($this->pokemonRepository->findByName($request->name())) {
-           throw new PokemonAlreadyExistsException($request->name());
+        if ($this->pokemonRepository->findByName($request->name())) {
+            throw new PokemonAlreadyExistsException($request->name());
         }
 
         $evolution = null;
         $types = new PokemonTypes($request->firstType(), $request->secondType());
 
-        if(!empty($request->evolutionId())) {
+        if (!empty($request->evolutionId())) {
             $evolution = $this->pokemonRepository->getById($request->evolutionId());
         }
 
@@ -86,6 +86,7 @@ class PokemonService
 
     /**
      * @param UpdatePokemonRequest $request
+     *
      * @throws PokemonNotFoundException
      * @throws InvalidRequestException
      */
@@ -99,7 +100,7 @@ class PokemonService
         $pokemon->updateDescription($request->shortDescription());
         $pokemon->updateTypes(new PokemonTypes($request->firstType(), $request->secondType()));
 
-        if(!empty($request->evolutionId())) {
+        if (!empty($request->evolutionId())) {
             $evolution = $this->pokemonRepository->getById($request->evolutionId());
             $pokemon->updateEvolution($evolution);
         }
@@ -109,6 +110,7 @@ class PokemonService
 
     /**
      * @param int $id
+     *
      * @throws PokemonNotFoundException
      */
     public function delete(int $id): void
@@ -125,12 +127,14 @@ class PokemonService
      */
     public function getAll(): array
     {
-       return $this->pokemonRepository->findAll();
+        return $this->pokemonRepository->findAll();
     }
 
     /**
      * @param int $id
+     *
      * @return Pokemon
+     *
      * @throws PokemonNotFoundException
      */
     public function getById(int $id): Pokemon

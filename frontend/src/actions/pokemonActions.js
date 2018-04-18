@@ -186,12 +186,12 @@ export function searchPokemons(text) {
  */
 export function addPokemonFavorite(pokemonId) {
   return (dispatch, getState) => {
-    const favorites = getState().getIn(['pokemon', 'favorites'])
+    const favorites = getState().getIn(['pokemon', 'favoritesIds'])
       .filter(item => getState().getIn(['pokemon', 'data'])
         .find(pokemon => pokemon.get('id') === item));
     console.log(favorites.toJS());
     if(favorites.size >= MAX_FAVORITES) {
-      toastr.error('', 'You can not have more than ten Pokemons as favorites')
+      toastr.error('', 'You can not have more than ten Pokemons as favorites');
       return;
     }
     const favoritesJS = favorites.toJS();
@@ -210,7 +210,7 @@ export function addPokemonFavorite(pokemonId) {
  */
 export function removePokemonFavorite(pokemonId) {
   return (dispatch, getState) => {
-    const favorites = getState().getIn(['pokemon', 'favorites']);
+    const favorites = getState().getIn(['pokemon', 'favoritesIds']);
     if(favorites.size === 0) {
       return;
     }

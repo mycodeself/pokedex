@@ -1,16 +1,18 @@
 <?php
 
 namespace App\Repository;
+
 use App\Entity\Pokemon;
 use App\Exception\PokemonNotFoundException;
 
 /**
- * Class PokemonRepositoryInterface
+ * Class PokemonRepositoryInterface.
  */
 interface PokemonRepositoryInterface
 {
     /**
      * @param int $id
+     *
      * @return Pokemon
      *
      * @throws PokemonNotFoundException
@@ -19,6 +21,7 @@ interface PokemonRepositoryInterface
 
     /**
      * @param int $id
+     *
      * @return Pokemon|null
      */
     public function findById(int $id): ?Pokemon;
@@ -30,6 +33,7 @@ interface PokemonRepositoryInterface
 
     /**
      * @param string $name
+     *
      * @return Pokemon
      */
     public function findByName(string $name): ?Pokemon;
@@ -43,5 +47,4 @@ interface PokemonRepositoryInterface
      * @param Pokemon $pokemon
      */
     public function remove(Pokemon $pokemon): void;
-
 }

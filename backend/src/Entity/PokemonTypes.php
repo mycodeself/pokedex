@@ -3,7 +3,7 @@
 namespace App\Entity;
 
 /**
- * Class PokemonType
+ * Class PokemonType.
  */
 class PokemonTypes
 {
@@ -19,6 +19,7 @@ class PokemonTypes
 
     /**
      * PokemonType constructor.
+     *
      * @param array $types
      */
     public function __construct(string $primaryType, string $secondaryType = '')
@@ -49,7 +50,7 @@ class PokemonTypes
     public function types(): array
     {
         $types = [$this->primaryType];
-        if(!empty($this->secondaryType)) {
+        if (!empty($this->secondaryType)) {
             $types[] = $this->secondaryType;
         }
 
@@ -58,6 +59,7 @@ class PokemonTypes
 
     /**
      * @param PokemonTypes $type
+     *
      * @return bool
      */
     public function equals(PokemonTypes $type): bool
@@ -65,5 +67,4 @@ class PokemonTypes
         return $this->primaryType() === $type->primaryType()
             && $this->secondaryType() === $type->secondaryType();
     }
-
 }
