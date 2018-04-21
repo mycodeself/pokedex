@@ -2,6 +2,7 @@ docker/mariadb/data
 .composer
 .idea
 .php_cs.cache
+.bash_history
 
 ###> symfony/framework-bundle ###
 /.env
