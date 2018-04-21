@@ -8,7 +8,13 @@ const PokemonItem = ({pokemon}) => {
     <div className="pokemon-item">
       <div className="pokemon-item__block">
         <div className="pokemon-item__image">
-          <img src={imageSrc} height={150} width={150} />
+          <img
+            src={imageSrc}
+            height={150}
+            width={150}
+            alt={pokemon.name}
+            title={pokemon.name}
+          />
         </div>
         <PokemonItemOptions pokemon={pokemon}/>
         <h1>{pokemon.name}</h1>

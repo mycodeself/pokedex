@@ -8,6 +8,11 @@ form {
   margin-right: auto;
 }
 
+.form-select {
+  margin-bottom: 1.4em;
+  position: relative;
+}
+
 .form-group {
   display: flex;
   flex-flow: column-reverse;
@@ -146,3 +151,9 @@ form {
 
 }
 
+
+// React-Select
+
+.Select-menu-outer * {
+  max-height: 150px !important;
+}

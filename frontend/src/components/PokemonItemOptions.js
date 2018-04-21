@@ -45,18 +45,19 @@ class PokemonItemOptions extends React.Component {
         />
         <div className="pokemon-item__options">
           <Button onClick={() => this.props.openOverlay(true, this.props.pokemon)}>
-            <SvgIcon name="edit"/>
+            <SvgIcon title="Edit" name="edit"/>
           </Button>
           <Button
             onClick={this.handleFavClick}
           >
             <SvgIcon
+              title="Add to favorites"
               name="star"
               disabled={!this.state.isFavorite}
             />
           </Button>
           <Button onClick={() => this.confirmModalRef.open()}>
-            <SvgIcon name="eraser" />
+            <SvgIcon title="Delete" name="eraser" />
           </Button>
         </div>
       </div>

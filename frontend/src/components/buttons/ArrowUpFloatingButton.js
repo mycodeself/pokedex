@@ -45,7 +45,7 @@ class ArrowUpFloatingButton extends React.Component {
     return (
       <div className="scroll-up-arrow">
         <Button onClick={this.handleClick}>
-          <SvgIcon size={42} name="up-arrow" />
+          <SvgIcon title="Scroll top" size={42} name="up-arrow" />
         </Button>
       </div>
     )

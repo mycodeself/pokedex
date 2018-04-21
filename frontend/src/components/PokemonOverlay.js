@@ -41,7 +41,7 @@ class PokemonOverlay extends React.Component {
       <section className={className}>
         <div className="close-button">
           <Button onClick={this.props.close}>
-            <em className="icon-close icon--white icon--l"></em>
+            <em title="Close" className="icon-close icon--white icon--l"></em>
           </Button>
         </div>
         <h1>{title}</h1>

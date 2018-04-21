@@ -32,7 +32,7 @@ class NavBar extends React.Component {
       return (
         <div className="navbar-buttons">
           <Button onClick={this.props.closeFavoritesView}>
-            <em className="icon icon--white icon-back"></em>
+            <em title="Back" className="icon icon--white icon-back"></em>
           </Button>
         </div>
       )
@@ -42,15 +42,16 @@ class NavBar extends React.Component {
       <div className="navbar-buttons">
         <Button onClick={this.props.viewPokemonFavorites}>
           <SvgIcon
+            title="Favorites"
             name="star"
             size={24}
           />
         </Button>
         <Button onClick={this.onClickSearch}>
-          <em className="icon icon--white icon-search"></em>
+          <em title="Search" className="icon icon--white icon-search"></em>
         </Button>
         <Button onClick={this.props.openOverlay}>
-          <em className="icon icon--white icon-plus"></em>
+          <em title="New Pokemon" className="icon icon--white icon-plus"></em>
         </Button>
       </div>
     )
@@ -72,7 +73,7 @@ class NavBar extends React.Component {
               onChange={(event) => this.props.searchPokemons(event.target.value)}
             />
             <Button onClick={this.onClickCloseSearch}>
-              <em className="icon icon--white icon--s icon-cross-out"></em>
+              <em title="Close" className="icon icon--white icon--s icon-cross-out"></em>
             </Button>
           </div>
         </nav>

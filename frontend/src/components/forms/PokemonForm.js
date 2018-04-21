@@ -118,11 +118,11 @@ class PokemonForm extends React.Component {
               length: {min: 4, max: 20}
             }}
           />
-          <div className="form-group">
+          <div className="form-select">
             <PokemonSelect
               name="evolution"
               placeholder="EVOLUTION"
-              onChange={(selectedOption) => this.setState({evolutionId: selectedOption.id})}
+              onChange={(selectedOption) => this.setState({evolutionId: selectedOption ? selectedOption.id : 0})}
               value={this.state.evolutionId}
               filterId={this.state.id}
             />

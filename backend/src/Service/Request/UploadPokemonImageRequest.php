@@ -3,6 +3,7 @@
 namespace App\Service\Request;
 
 use Symfony\Component\HttpFoundation\File\UploadedFile;
+use Symfony\Component\Validator\Constraints as Assert;
 
 class UploadPokemonImageRequest implements RequestInterface
 {
@@ -13,6 +14,12 @@ class UploadPokemonImageRequest implements RequestInterface
 
     /**
      * @var UploadedFile
+     * @Assert\NotBlank
+     * @Assert\File(
+     *     maxSize = "1M",
+     *     mimeTypes = {"image/jpeg", "image/png", "image/gif"},
+     *     mimeTypesMessage = "Please upload a valid image (max size 1Mb)"
+     * )
      */
     private $image;
 

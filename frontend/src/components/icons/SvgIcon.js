@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SvgIcon = ({name, size = 24, disabled = false}) => {
+const SvgIcon = ({name, size = 24, disabled = false, title = ''}) => {
   const path = `../../../assets/images/svg/${name}.svg`;
   const style = disabled ? {filter: 'grayscale(100%)'} : {};
   return (
@@ -9,6 +9,8 @@ const SvgIcon = ({name, size = 24, disabled = false}) => {
       src={path}
       width={size}
       height={size}
+      alt={title}
+      title={title}
     />
   )
 }
