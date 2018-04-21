@@ -16,7 +16,11 @@ class PokemonList extends React.Component {
     return (
       <div>
         <p style={{textAlign: 'center'}}>
-          {`${this.props.pokemons.length} wild Pokémon has appeared.`}
+          {
+            (this.props.pokemons.length)
+              ? `${this.props.pokemons.length} wild Pokémon has appeared.`
+              : 'No Pokémon found :('
+          }
         </p>
         <div className="pokemon-list">
           {this.props.pokemons.map(

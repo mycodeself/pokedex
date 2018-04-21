@@ -1,8 +1,9 @@
 import React from 'react'
+import Scroll from 'react-scroll'
 import SvgIcon from "../icons/SvgIcon";
 import Button from "./Button";
 
-const VISIBLE_THRESHOLD_Y = 50;
+const VISIBLE_THRESHOLD_Y = 200;
 
 class ArrowUpFloatingButton extends React.Component {
   constructor(props) {
@@ -10,6 +11,8 @@ class ArrowUpFloatingButton extends React.Component {
 
     this.handleClick = this.handleClick.bind(this);
     this.handleScroll = this.handleScroll.bind(this);
+
+    this.scroll = Scroll.animateScroll;
 
     this.state = {
       isVisible: false,
@@ -33,7 +36,7 @@ class ArrowUpFloatingButton extends React.Component {
   }
 
   handleClick() {
-    window.scrollTo(0, 0);
+    this.scroll.scrollToTop()
   }
 
   render() {
