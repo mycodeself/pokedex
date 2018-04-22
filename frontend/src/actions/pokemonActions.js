@@ -104,6 +104,14 @@ export function updatePokemon(pokemon) {
     return putPokemonsService(pokemon)
       .then(() => {
         const state = getState();
+
+        if(pokemon.evolutionId) {
+          pokemon.evolution = state.getIn(['pokemon', 'data'])
+            .filter(item => item.get('id') === pokemon.evolutionId)
+            .get(0)
+            .toJS();
+        }
+
         dispatch(updated(pokemon));
 
         if(pokemon.image instanceof File) {
@@ -144,7 +152,6 @@ export function deletePokemon(pokemonId) {
     return deletePokemonService(pokemonId)
       .then(() => {
         const state = getState();
-        console.log(state.getIn(['pokemon', 'lastSearchText']));
         dispatch(deleted(pokemonId));
         dispatch(searchPokemons(state.getIn(['pokemon', 'lastSearchText'])));
         toastr.success('','The pokemon has been removed');
@@ -189,7 +196,6 @@ export function addPokemonFavorite(pokemonId) {
     const favorites = getState().getIn(['pokemon', 'favoritesIds'])
       .filter(item => getState().getIn(['pokemon', 'data'])
         .find(pokemon => pokemon.get('id') === item));
-    console.log(favorites.toJS());
     if(favorites.size >= MAX_FAVORITES) {
       toastr.error('', 'You can not have more than ten Pokemons as favorites');
       return;

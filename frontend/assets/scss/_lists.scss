@@ -20,6 +20,35 @@
       box-shadow: 0 2px 2px rgba(0,0,0,0.1), 0 2px 2px rgba(0,0,0,0.1);
     }
 
+    .pokemon-item__description {
+      position: absolute;
+      text-align: center;
+      background: rgba(50,50, 50, 0.85);
+      height: 0;
+      width: 100%;
+      visibility: hidden;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      z-index: 1;
+      color: $white;
+      transition: all 0.1s ease-in-out;
+      button {
+        position: absolute;
+        top: 4%;
+        right: 4%;
+      }
+
+      p {
+        margin: 1em;
+      }
+    }
+
+    .pokemon-item__description--open {
+      height: 100%;
+      visibility: visible;
+    }
+
     .pokemon-item__block {
 
       h1 {

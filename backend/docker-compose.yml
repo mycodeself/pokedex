@@ -12,7 +12,7 @@ services:
         - mariadb
 
     nginx:
-      container_name: pokedex_nginx
+      container_name: pokedex-api_nginx
       build: ./docker/nginx
       env_file:
         - ./docker/env

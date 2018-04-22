@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+    nginx:
+      container_name: pokedex_nginx
+      build: ./docker/nginx
+      ports:
+        - "80:80"
+      volumes:
+        - ./:/var/www

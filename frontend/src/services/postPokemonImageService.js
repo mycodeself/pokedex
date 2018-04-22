@@ -25,7 +25,6 @@ export default function postPokemonImageService(pokemonId, image) {
         resolve(data);
       })
       .catch((error) => {
-        console.log(error);
         reject(error);
       })
   });

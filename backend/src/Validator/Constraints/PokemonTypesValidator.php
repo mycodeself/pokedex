@@ -21,7 +21,7 @@ class PokemonTypesValidator extends ConstraintValidator
     {
         if (empty($value->firstType()) && empty($value->firstType())) {
             $this->context->buildViolation('The pokémon has to have at least one type.')
-                ->atPath('firstType')
+                ->atPath('types')
                 ->addViolation();
         }
     }

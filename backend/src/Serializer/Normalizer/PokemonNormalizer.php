@@ -51,7 +51,19 @@ class PokemonNormalizer implements NormalizerInterface
             ? $request->getUriForPath(sprintf('/uploads/pokemons/%s', $object->image()))
             : '';
 
-        $evolution = $object->evolution() ? $this->normalize($object->evolution(), 'json') : null;
+        $evolutionArray = [];
+
+        if($object->evolution() instanceof Pokemon) {
+            $evolution = $object->evolution();
+            $evolutionArray = [
+                'id' => $evolution->id(),
+                'name' => $evolution->name(),
+                'description' => $evolution->description(),
+                'firstType' => $evolution->types()->primaryType(),
+                'secondType' => $evolution->types()->secondaryType(),
+            ];
+        }
+
 
         return [
             'id' => $object->id(),
@@ -59,7 +71,7 @@ class PokemonNormalizer implements NormalizerInterface
             'description' => $object->description(),
             'firstType' => $object->types()->primaryType(),
             'secondType' => $object->types()->secondaryType(),
-            'evolution' => $evolution,
+            'evolution' => $evolutionArray,
             'image' => $object->image(),
             'imageUrl' => $imageUrl,
         ];
