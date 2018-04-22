@@ -137,6 +137,14 @@ class Pokemon
     }
 
     /**
+     *
+     */
+    public function removeEvolution(): void
+    {
+       $this->evolution = null;
+    }
+
+    /**
      * @param string $image
      */
     public function updateImage(string $image): void

@@ -27,7 +27,7 @@ services:
       container_name: pokedex_mariadb
       image: mariadb:latest
       volumes:
-        - ./docker/mariadb/data:/var/lib/mysql
+        - ./../resources/db/Pokedex.sql:/docker-entrypoint-initdb.d/Pokedex.sql
       env_file:
         - ./docker/env
       ports:

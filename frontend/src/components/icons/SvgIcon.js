@@ -1,7 +1,7 @@
 import React from 'react'
 
 const SvgIcon = ({name, size = 24, disabled = false, title = ''}) => {
-  const path = `../../../assets/images/svg/${name}.svg`;
+  const path = `/images/svg/${name}.svg`;
   const style = disabled ? {filter: 'grayscale(100%)'} : {};
   return (
     <img

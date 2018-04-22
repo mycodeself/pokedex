@@ -25,7 +25,7 @@ class PokemonItem extends React.Component {
 
   render() {
     const pokemon = this.props.pokemon;
-    const imageSrc = pokemon.imageUrl ? pokemon.imageUrl : '../../assets/images/svg/pokeball.svg';
+    const imageSrc = pokemon.imageUrl ? pokemon.imageUrl : '/images/svg/pokeball.svg';
     return (
       <div className="pokemon-item">
         <div className={

@@ -56,7 +56,7 @@ class ImageInput extends React.Component {
               ? <img src={this.state.image} width={150} height={150} />
               : (this.props.imageUrl)
                 ? <img src={this.props.imageUrl} width={150} height={150} />
-                : <img src="../../../assets/images/svg/pokeball.svg" />
+                : <img src="/images/svg/pokeball.svg" />
           }
           <input
             ref={ref => this.ref = ref}

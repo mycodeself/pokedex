@@ -104,12 +104,14 @@ export function updatePokemon(pokemon) {
     return putPokemonsService(pokemon)
       .then(() => {
         const state = getState();
-
+console.log(pokemon.evolutionId)
         if(pokemon.evolutionId) {
           pokemon.evolution = state.getIn(['pokemon', 'data'])
             .filter(item => item.get('id') === pokemon.evolutionId)
             .get(0)
             .toJS();
+        } else {
+          pokemon.evolution = null;
         }
 
         dispatch(updated(pokemon));

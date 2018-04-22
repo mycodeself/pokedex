@@ -103,6 +103,8 @@ class PokemonService
         if (!empty($request->evolutionId())) {
             $evolution = $this->pokemonRepository->getById($request->evolutionId());
             $pokemon->updateEvolution($evolution);
+        } else {
+            $pokemon->removeEvolution();
         }
 
         $this->pokemonRepository->save($pokemon);

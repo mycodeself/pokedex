@@ -34,24 +34,9 @@ RUN docker-php-ext-enable zip
 RUN pecl install apcu
 RUN docker-php-ext-enable apcu
 
-# Install xdebug
-RUN pecl install xdebug
-RUN docker-php-ext-enable xdebug \
-    && echo "error_reporting = E_ALL" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
-    && echo "display_startup_errors = On" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
-    && echo "display_errors = On" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
-    && echo "xdebug.remote_enable = 1" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
-    && echo "xdebug.remote_autostart = 1" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
-    && echo "xdebug.idekey = \"PHPSTORM\"" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
-    && echo "xdebug.remote_port = 9000" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
-    && echo "xdebug.remote_host = 192.168.1.10" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini \
-    && echo "xdebug.remote_log = \"/tmp/xdebug.log\"" >> /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
-
 # Patch for change remote PHP-FPM port to 9001 for PHPStorm that listen xdebug at 9000
 RUN  sed -i -e 's/9000/9001/g' /usr/local/etc/php-fpm.d/zz-docker.conf
 
-# xdebug
-EXPOSE 9000
 # php-fpm
 EXPOSE 9001
 
