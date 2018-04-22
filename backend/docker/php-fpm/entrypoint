@@ -11,7 +11,7 @@ echo 'Loading pokedex...'
 echo 'Running composer...'
 echo '#####################################'
 composer install --prefer-dist --no-interaction
-
+rm -rf /var/www/var/*
 echo '#####################################'
 echo 'BackEnd ready http://localhost:8081/api/pokemons'
 echo 'FrontEnd if you run start script on http://localhost/'
