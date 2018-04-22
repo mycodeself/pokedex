@@ -15,12 +15,12 @@ cd test &&
 
 Wait until all containers are loaded, can take a few minutes. 
 
-When backend is ready you will see
+When backend is ready you will see  
  pokedex_php | #####################################  
  pokedex_php | BackEnd ready http://localhost:8081/api/pokemons  
  pokedex_php | FrontEnd if you run start script on http://localhost/  
  pokedex_php | #####################################
-
+ 
 
 Can be necessary to give permissions to script:
 `chmod +x start`
